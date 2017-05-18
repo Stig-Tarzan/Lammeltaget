@@ -18,6 +18,14 @@ $(document).ready(function () {
 		$('#user_section').load('includes/views/register.php');
 
 	});
+	$('#main_section').on('click', '#add_trail',function () {
+
+		
+		
+		
+		$('#content_top').load('includes/views/create_trail.php');
+
+	});
 
 	
 

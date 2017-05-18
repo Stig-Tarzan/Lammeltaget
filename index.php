@@ -28,7 +28,7 @@
 
                 <div id='search_container'></div>
                 <div id='filter_container'></div>
-
+                <div id='add_trail'></div>
                 <div id='content_top'><p>Välkommen ombord!</p></div>
             </div>
             <div id='user_section' >

@@ -28,7 +28,15 @@ body
 	position: absolute;
 }
 
-
+#add_trail {
+	background-image: url('../img/add_trail.png');
+	background-size: cover;
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 2%;
+	left: 	90%;
+}
 
 
 
@@ -130,3 +138,12 @@ body
 #trail {
 	padding: 5px;
 }
+
+/* styling for trails/maps and its contents*/
+
+#google_map {
+	width: 95%;
+	height:40% ;
+	min-height: 150px;
+}
+
