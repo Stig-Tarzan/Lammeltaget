@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	$('#search_container').load('includes/views/search.php');
+	$('#user_section').load('includes/views/login.php');
 
 	$('#search_container').on('click', '#search_button',function () {
 		
