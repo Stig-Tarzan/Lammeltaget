@@ -18,7 +18,7 @@
             </div>
         </head>
 
-        <body class='body'>
+        <body>
             <div class='main_section'>
                 <div id='search_container'></div>
                 <div id='filter_container'></div>
