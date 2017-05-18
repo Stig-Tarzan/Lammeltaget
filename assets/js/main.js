@@ -10,7 +10,10 @@ $(document).ready(function () {
 		$('#content_top').load('includes/views/trails.php');
 	});
 
-	$('#user_section').on('click', '#register_link',function () {
+	$('#user_section').on('click', '#register_button',function () {
+
+		$('#user_section').css('width', '30%');
+		
 		
 		$('#user_section').load('includes/views/register.php');
 
