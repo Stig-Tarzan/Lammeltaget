@@ -18,8 +18,13 @@
             </div>
         </head>
 
+<<<<<<< HEAD
         <body id='body'>
             <div id='main_section'>
+=======
+        <body>
+            <div class='main_section'>
+>>>>>>> 04a58fc6f5bb07cdfa473bc08d2d0602d628875f
                 <div id='search_container'></div>
                 <div id='filter_container'></div>
 
