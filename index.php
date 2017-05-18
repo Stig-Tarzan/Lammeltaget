@@ -1,5 +1,5 @@
  <?php
- include 'bootstrap.php';
+ include 'includes/bootstrap.php';
  $db = new Database();
  ?>
 
