@@ -1,8 +1,14 @@
-<?php 
+<?php  
 
-$server='localhost';
-$user_name='root';
-$password='';
-$database_name='lammeltaget';
-
-$conn=mysqli_connect($server, $user_name, $password, $database_name); 	
+class Database
+{
+  	function __construct()
+  	{
+  	  	$this->db = mysqli_connect("localhost","root","","lammeltaget");
+  	  	if ($this->db->connect_error) 
+  	  	{
+  	 	   $code  = $mysqli->connect_errno;
+  	 	   die("Error: ($code) $this->conncetion->connect_error");
+  	 	}
+  	}
+}

@@ -1,5 +1,6 @@
  <?php
  include 'bootstrap.php';
+ $db = new Database();
  ?>
 
  <!DOCTYPE html
