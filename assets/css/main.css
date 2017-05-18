@@ -28,6 +28,7 @@ body
 	position: absolute;
 }
 
+
 #add_trail {
 	background-image: url('../img/add_trail.png');
 	background-size: cover;
@@ -37,6 +38,7 @@ body
 	bottom: 2%;
 	left: 	90%;
 }
+
 
 
 
@@ -62,7 +64,6 @@ body
 	font-size: 1em;
 	line-height: 1em;
 	color: #282828;
-
 }
 
 #user_section
@@ -76,7 +77,6 @@ body
 	margin-top: 1%;
 	background-color: rgb(255,255,255);
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	
 	padding-bottom: 20px;
 	padding: 10px;
 }
@@ -91,11 +91,9 @@ body
 	line-height: 1em;
 	color: #282828;
 	text-align: center;
-
 }
 
 .button {
-
 	width: 100px;
 }
 
@@ -107,7 +105,6 @@ body
 	position: relative;
 	padding: 20px;
 	padding-left: 10px;
-
 }
 #search_button {
 	
@@ -132,8 +129,6 @@ body
 #filter_container button {
 
 	float: right;
-
-	
 }
 #trail {
 	padding: 5px;

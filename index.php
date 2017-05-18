@@ -17,19 +17,22 @@
             </a><title>Lämmeltåget</title>
             <div class='banner'>
                 <a href='index.php'><H1>Lämmeltåget</H1></a>
+
             </div>
         </head>
 
 
         <body id='body'>
             <div id='main_section'>
+
+
                 <div id='search_container'></div>
                 <div id='filter_container'></div>
                 <div id='add_trail'></div>
                 <div id='content_top'><p>Välkommen ombord!</p></div>
             </div>
             <div id='user_section' >
-                <p>Användare</p>
+                <p>Anvädare</p>
                 <p>Här skulle man kunna logga in</p>
             </div>
         </body>
