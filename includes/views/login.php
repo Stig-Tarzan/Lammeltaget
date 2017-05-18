@@ -2,5 +2,6 @@
 
 	$login_fields = "<input name='username_value' id='username_input' placeholder='Username'>
 					 <input name='pasword_value' id='password_input' type='password' placeholder='Password'>
-					 <button name='register_button' id='register_button' class='button'>Register</button>";
+					 <button name='login_button' id='login_button' class='button'>Logga in</button>
+					 <a><p>Registrera</p></a>";
 	echo $login_fields;
