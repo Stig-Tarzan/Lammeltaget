@@ -1,6 +1,6 @@
  <?php
  include 'includes/bootstrap.php';
- $db = new Database();
+
  ?>
 
  <!DOCTYPE html
