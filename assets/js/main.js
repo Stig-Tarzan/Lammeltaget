@@ -9,10 +9,13 @@ $(document).ready(function () {
 
 		$('#content_top').load('includes/views/trails.php');
 	});
+
 	$('#user_section').on('click', '#register_link',function () {
 		
 		$('#user_section').load('includes/views/register.php');
 
-		
 	});
+
+	
+
 });
