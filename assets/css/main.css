@@ -1,6 +1,7 @@
 body
 {
 	background-color: rgb(220,220,220);
+	margin:0;
 }
 
 .banner
@@ -29,12 +30,9 @@ body
 
 
 
-.body
-{
-	margin:0;
-}
 
-.main_section
+
+#main_section
 {
 	display: flex;
 	flex-direction: column;
@@ -47,10 +45,10 @@ body
   	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.main_section p
+#main_section p
 {
 	overflow-wrap: break-word;
-	margin: 2%;
+	margin: 0;
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
@@ -59,7 +57,7 @@ body
 
 }
 
-.user_section
+#user_section
 {
 	display: flex;
 	flex-direction: column;
@@ -70,9 +68,12 @@ body
 	margin-top: 1%;
 	background-color: rgb(255,255,255);
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	
+	padding-bottom: 20px;
+	padding: 10px;
 }
 
-.user_section p
+#user_section p
 {
 	overflow-wrap: break-word;
 	margin: 2%;
@@ -117,10 +118,15 @@ body
 
 	display: inline-block;
 	vertical-align: baseline;
+	padding-right: 10px;
 
 }
 #filter_container button {
 
 	float: right;
+
 	
+}
+#trail {
+	padding: 5px;
 }

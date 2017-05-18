@@ -1,4 +1,7 @@
- 
+ <?php
+ include 'includes/bootstrap.php';
+ $db = new Database();
+ ?>
 
  <!DOCTYPE html
     <html lang='en'>
@@ -18,14 +21,17 @@
             </div>
         </head>
 
-        <body class='body'>
-            <div class='main_section'>
+
+        <body id='body'>
+            <div id='main_section'>
+
+
                 <div id='search_container'></div>
                 <div id='filter_container'></div>
 
                 <div id='content_top'><p>Välkommen ombord!</p></div>
             </div>
-            <div class='user_section'>
+            <div id='user_section' >
                 <p>Anvädare</p>
                 <p>Här skulle man kunna logga in</p>
             </div>
