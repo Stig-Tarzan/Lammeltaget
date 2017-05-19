@@ -18,6 +18,22 @@ $(document).ready(function () {
 		$('#user_section').load('includes/views/register.php');
 
 	});
+
+	$('#user_section').on('click', '#apply_register_button',function () {
+		var user_name = $('#username_register').val();
+		$.post("includes/models/register_process.inc.php", 
+		{
+			username_value: user_name
+		}, function(data, status)
+		{
+			$("#search_container").html(data);
+		});
+		alert(user_name);
+		
+
+	});	
+	
+
 	$('#main_section').on('click', '#add_trail',function () {
 
 		
