@@ -3,6 +3,19 @@ $(document).ready(function () {
 	$('#search_container').load('includes/views/search.inc.php');
 	$('#user_section').load('includes/views/login.inc.php');
 
+	$('#user_info').load('includes/views/user.inc.php');
+
+	//*************log in********************************
+	$('#user_info').on('click', '#log_out_button',function () {
+
+		$.post("includes/models/log_out_process.inc.php",{}, function(data, status)
+		{
+			window.location.href = 'index.php';
+		});		
+	});
+	//***************************************************
+
+
 	$('#search_container').on('click', '#search_button',function () {
 		
 		$('#filter_container').load('includes/views/filters.inc.php');
@@ -59,7 +72,7 @@ $(document).ready(function () {
 				data
 			, function(data, status)
 			{
-				alert(data);				
+				window.location.href = 'index.php';
 			});		
 		}
 	//***************************************************

@@ -28,17 +28,16 @@ body
 	position: absolute;
 }
 
-
-#add_trail {
-	background-image: url('../img/add_trail.png');
-	background-size: cover;
-	position: fixed;
-	width: 70px;
-	height: 70px;
-	bottom: 2%;
-	left: 	90%;
+#user_info
+{
+	position: absolute;
+	right: 135px;
+	top: 200px;
 }
-
+#user_info p
+{
+	color: white;
+}
 
 
 
@@ -96,6 +95,20 @@ body
 .button {
 	width: 100px;
 }
+
+
+#add_trail {
+	background-image: url('../img/add_trail.png');
+	background-size: cover;
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 2%;
+	left: 	90%;
+}
+
+
+
 
 
 /* styling for search_container and its contents*/

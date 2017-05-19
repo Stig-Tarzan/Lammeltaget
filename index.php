@@ -1,6 +1,5 @@
  <?php
-
-
+session_start(); 
  ?>
 
  <!DOCTYPE html
@@ -17,6 +16,7 @@
             </a><title>Lämmeltåget</title>
             <div class='banner'>
                 <a href='index.php'><H1>Lämmeltåget</H1></a>
+                <div id='user_info'></div>
             </div>
         </head>
 
