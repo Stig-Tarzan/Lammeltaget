@@ -3,10 +3,9 @@
 	
 	if (isset($_POST['username_value'])) 
 	{
-		echo $_POST['username_value'];
 		$user_name = $_POST['username_value'];
-		$email = 123;
-		$password =123;
+		$email = $_POST['email_value'];
+		$password =$_POST['password_value'];
 
 		/*$email = $_POST['email_value'];				
 		$password = $_POST['password_value'];*/

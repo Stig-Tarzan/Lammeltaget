@@ -21,14 +21,26 @@ $(document).ready(function () {
 
 	$('#user_section').on('click', '#apply_register_button',function () {
 		var user_name = $('#username_register').val();
-		$.post("includes/models/register_process.inc.php", 
+		var email =$('#email_register').val();
+		var password =$('#password_register').val();
+		var data = { username_value: user_name, email_value: email, password_value: password }
+		if(user_name == "" || email == ""|| password == "")
 		{
-			username_value: user_name
-		}, function(data, status)
+			alert("Please fill all fields")
+		}
+		else
 		{
-			$("#search_container").html(data);
-		});
-		alert(user_name);
+			$.post("includes/models/register_process.inc.php", 
+				data
+			, function(data, status)
+			{
+				alert(data);
+				$('#user_section').load('includes/views/login.php');
+				$('#user_section').css('width', '10%');
+			});
+			
+		}
+
 		
 
 	});	
