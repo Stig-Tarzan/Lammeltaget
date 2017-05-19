@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-	$('#search_container').load('includes/views/search.php');
-	$('#user_section').load('includes/views/login.php');
+	$('#search_container').load('includes/views/search.inc.php');
+	$('#user_section').load('includes/views/login.inc.php');
 
 	$('#search_container').on('click', '#search_button',function () {
 		
-		$('#filter_container').load('includes/views/filters.php');
+		$('#filter_container').load('includes/views/filters.inc.php');
 
-		$('#content_top').load('includes/views/trails.php');
+		$('#content_top').load('includes/views/trails.inc.php');
 	});
 
 	$('#user_section').on('click', '#register_button',function () {
@@ -15,7 +15,7 @@ $(document).ready(function () {
 		$('#user_section').css('width', '30%');
 		
 		
-		$('#user_section').load('includes/views/register.php');
+		$('#user_section').load('includes/views/register.inc.php');
 
 	});
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
 			, function(data, status)
 			{
 				alert(data);
-				$('#user_section').load('includes/views/login.php');
+				$('#user_section').load('includes/views/login.inc.php');
 				$('#user_section').css('width', '10%');
 			});		
 		}
@@ -59,8 +59,7 @@ $(document).ready(function () {
 				data
 			, function(data, status)
 			{
-				alert(data);
-				$('#user_section').css('display', 'none');
+				alert(data);				
 			});		
 		}
 	//***************************************************
@@ -74,7 +73,7 @@ $(document).ready(function () {
 		
 		
 		
-		$('#content_top').load('includes/views/create_trail.php');
+		$('#content_top').load('includes/views/create_trail.inc.php');
 
 	});
 
