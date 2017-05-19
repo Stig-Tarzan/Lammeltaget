@@ -19,6 +19,7 @@ $(document).ready(function () {
 
 	});
 
+	//*************Register************************
 	$('#user_section').on('click', '#apply_register_button',function () {
 		var user_name = $('#username_register').val();
 		var email =$('#email_register').val();
@@ -37,14 +38,35 @@ $(document).ready(function () {
 				alert(data);
 				$('#user_section').load('includes/views/login.php');
 				$('#user_section').css('width', '10%');
-			});
-			
+			});		
 		}
-
-		
-
 	});	
+	//***************************************************
+
+	//*************log in********************************
+	$('#user_section').on('click', '#login_button',function () {
+		var user_name = $('#username_input').val();
+		var password =$('#password_input').val();
+		var data = { username_value: user_name, password_value: password }
+
+		if(user_name == ""|| password == "")
+		{
+			alert("Please fill all fields")
+		}
+		else
+		{
+			$.post("includes/models/login_process.inc.php", 
+				data
+			, function(data, status)
+			{
+				alert(data);
+			});		
+		}
+	//***************************************************
+
+
 	
+	});	
 
 	$('#main_section').on('click', '#add_trail',function () {
 
