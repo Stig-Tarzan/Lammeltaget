@@ -60,6 +60,7 @@ $(document).ready(function () {
 			, function(data, status)
 			{
 				alert(data);
+				$('#user_section').css('display', 'none');
 			});		
 		}
 	//***************************************************
