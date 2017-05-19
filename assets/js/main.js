@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 	$('#user_info').load('includes/views/user.inc.php');
 
-	//*************log in********************************
+	//*************log in*********************************
 	$('#user_info').on('click', '#log_out_button',function () {
 
 		$.post("includes/models/log_out_process.inc.php",{}, function(data, status)
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 	});
 
-	//*************Register************************
+	//*************Register*****************************
 	$('#user_section').on('click', '#apply_register_button',function () {
 		var user_name = $('#username_register').val();
 		var email =$('#email_register').val();

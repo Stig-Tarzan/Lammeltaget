@@ -36,7 +36,12 @@ body
 }
 #user_info p
 {
-	color: white;
+	margin: 0;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	color: #282828;
 }
 
 
