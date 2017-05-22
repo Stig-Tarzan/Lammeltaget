@@ -121,5 +121,5 @@ function updateTextInput(val) {
           document.getElementById('trail_current_difficulty').value=val; 
         }
 function updateLenghtInput(val) {
-          document.getElementById('trail_leng').value=val; 
+          document.getElementById('trail_length').value=val; 
         }
