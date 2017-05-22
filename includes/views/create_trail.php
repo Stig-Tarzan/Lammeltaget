@@ -11,6 +11,7 @@
 						    &attribution_web_url=https://developers.google.com/maps/documentation/embed/
 						    &key=AIzaSyBdgE6eNr-rgeTfeOn-RFf7hjuY4stagvc" allowfullscreen>
 						</iframe>';
+
  	 $googlemaps_api = "
  	 					<div id='map'></div>
     <script>
