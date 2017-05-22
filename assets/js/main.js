@@ -120,8 +120,6 @@ $(document).ready(function () {
 function updateTextInput(val) {
           document.getElementById('trail_current_difficulty').value=val; 
         }
-
-function getDistance(point1, point2)
 function getDistance(lat1, lat2, lon1, lon2)
 {
 	var R = 6371e3; // metres
@@ -136,7 +134,6 @@ function getDistance(lat1, lat2, lon1, lon2)
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
 	var d = R * c;
-	return 
 	return d;
 }
 
