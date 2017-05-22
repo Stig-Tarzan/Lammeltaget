@@ -123,26 +123,23 @@ function updateTextInput(val) {
 
 function getDistance(point1, point2)
 {
-	ar R = 6371e3; // metres
-	ar φ1 = lat1.toRadians();
-	ar φ2 = lat2.toRadians();
-	ar Δφ = (lat2-lat1).toRadians();
-	ar Δλ = (lon2-lon1).toRadians();
+	var R = 6371e3; // metres
+	var φ1 = lat1.toRadians();
+	var φ2 = lat2.toRadians();
+	var Δφ = (lat2-lat1).toRadians();
+	var Δλ = (lon2-lon1).toRadians();
 
-	ar a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+	var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
 	       Math.cos(φ1) * Math.cos(φ2) *
 	       Math.sin(Δλ/2) * Math.sin(Δλ/2);
-	ar c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
-	ar d = R * c;
+	var d = R * c;
 	return 
 }
 
 function updateLenghtInput(val) {
-<<<<<<< HEAD
+
           document.getElementById('trail_length').value=val; 
         }
-=======
-          document.getElementById('trail_leng').value=val; 
-        }
->>>>>>> f9d377b1e1412e89e7c7c31755336cc883371fe5
+
