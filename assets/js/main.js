@@ -137,7 +137,7 @@ function getDistance(lat1, lon1 , lat2, lon2)
 	return d;
 }
 
-function toRadians
+function toRadians(val)
 {
 	return this * Math.PI / 180;
 }
