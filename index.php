@@ -13,6 +13,9 @@
             <meta charset='utf-8'>
             <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
             <script type="text/javascript" src="assets/js/main.js"></script>
+            
+            
+
 
             </a><title>Lämmeltåget</title>
             <div class='banner'>
@@ -30,6 +33,7 @@
                 <div id='filter_container'></div>
                 <div id='add_trail'></div>
                 <div id='content_top'><p>Välkommen ombord!</p></div>
+                
             </div>
             <div id='user_section' >
                 <p>Anvädare</p>

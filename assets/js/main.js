@@ -13,6 +13,7 @@ $(document).ready(function () {
 	$('#user_section').on('click', '#register_button',function () {
 
 		$('#user_section').css('width', '30%');
+		$('#user_section').css('box-shadow', '0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22)');	
 		
 		
 		$('#user_section').load('includes/views/register.php');
