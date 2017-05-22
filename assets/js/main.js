@@ -120,7 +120,7 @@ $(document).ready(function () {
 function updateTextInput(val) {
           document.getElementById('trail_current_difficulty').value=val; 
         }
-function getDistance(lat1, lat2, lon1, lon2)
+function getDistance(lat1, lon1 , lat2, lon2)
 {
 	var R = 6371e3; // metres
 	var φ1 = lat1.toRadians();
