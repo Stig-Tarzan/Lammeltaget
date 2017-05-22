@@ -50,6 +50,7 @@ $(document).ready(function () {
 			, function(data, status)
 			{
 				alert(data);
+				alert(status);
 				$('#user_section').load('includes/views/login.inc.php');
 				$('#user_section').css('width', '10%');
 			});		
