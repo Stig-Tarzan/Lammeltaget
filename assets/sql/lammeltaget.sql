@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 18 maj 2017 kl 10:21
+-- Tid vid skapande: 22 maj 2017 kl 08:55
 -- Serverversion: 5.7.14
 -- PHP-version: 5.6.25
 
@@ -84,14 +84,37 @@ CREATE TABLE `trail` (
 CREATE TABLE `user` (
   `userID` int(11) NOT NULL,
   `userName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` text NOT NULL,
+  `salt` text,
   `firstName` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,
   `dateOfBirth` date DEFAULT NULL,
-  `adress` varchar(255) NOT NULL,
-  `postalCode` varchar(5) NOT NULL,
-  `postalCity` varchar(255) NOT NULL
+  `adress` varchar(255) DEFAULT NULL,
+  `postalCode` varchar(5) DEFAULT NULL,
+  `postalCity` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumpning av Data i tabell `user`
+--
+
+INSERT INTO `user` (`userID`, `userName`, `email`, `password`, `salt`, `firstName`, `lastName`, `dateOfBirth`, `adress`, `postalCode`, `postalCity`) VALUES
+(1, 'Stig-Tarzan', 'John.f.almqvist@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(37, 'Stig-ArchimedesQ ', 'arche@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(39, 'Stig-Jane', 'janes@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(40, 'Perry', 'per@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(41, 'Kallek', 'kalle@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(42, 'henry', 'henka@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(43, 'Gert', '123@', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(44, 'Pert', 'perty@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(48, 'Kurt', 'kurre@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(49, 'Pelle', 'pelets@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(50, 'Hulken', 'hullepull@gmaiul.com', '123', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(51, 'Stiggan', 'gmaui@', '1234', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(52, 'jula', 'John.f.almqvist@gmail.com', '1234', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(53, 'Krypterad', '123@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'a7bb625777dc0c0df839a5', NULL, NULL, NULL, NULL, NULL, NULL),
+(55, '123', '123', '2a67dec90998db3f5c9dbbc4ef1aaa4409c30722', 'ba7ac0cb1c036e6856c746', NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Index för dumpade tabeller
@@ -166,7 +189,7 @@ ALTER TABLE `trail`
 -- AUTO_INCREMENT för tabell `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- Restriktioner för dumpade tabeller
 --
