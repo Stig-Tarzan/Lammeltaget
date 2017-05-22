@@ -110,9 +110,13 @@ $(document).ready(function () {
 		
 		
 		$('#content_top').load('includes/views/create_trail.inc.php');
+		$('#content_bot').load('includes/views/trail_info.php');
 
 	});
 
 	
 
 });
+function updateTextInput(val) {
+          document.getElementById('trail_current_difficulty').value=val; 
+        }

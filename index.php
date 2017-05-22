@@ -29,8 +29,9 @@ session_start();
                 <div id='filter_container'></div>
                 <div id='add_trail'></div>
                 <div id='content_top'><p>Välkommen ombord!</p></div>
+                <div id='content_bot'></div>
                 
-                <div id='content_top'></div>
+                
             </div>
             <div id='user_section' >
             </div>
