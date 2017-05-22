@@ -138,3 +138,6 @@ function getDistance(point1, point2)
 	return 
 }
 
+function updateLenghtInput(val) {
+          document.getElementById('trail_leng').value=val; 
+        }
