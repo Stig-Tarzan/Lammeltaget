@@ -15,6 +15,8 @@
     // poly är en array som inehåller kordinater för alla polylines. kan sparas för representera trail i DB.
       var poly;
       var map;
+      var distance = 0  ;
+      var coordinates;
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -48,7 +50,29 @@
           map: map
 
         });
-		 alert(poly.getPath().getArray().toString());
+		 
+     coordinates = poly.getPath().getArray();
+     alert(coordinates.toString());
+     if(coordinates.length > 1 ){
+        alert('hej');
+        for(var i=0; i<coordinates.length; i++){
+          
+        var coord1 = coordinates[i].toString().split(',');
+        var lat1 = coord1[0];
+        var lon1 = coord1[1];
+
+        var coord2  = coordinates[i+1].toString().split(',');
+        var lat2 = coord2[0];
+        var lon2 = coord2[1];
+
+        i=i+1;
+        distance = distance + getDistance(lat1,lon1,lat2,lon2);
+        alert(getDistance(lat1,lon1,lat2,lon2));
+      }
+  
+     }
+     
+     updateLenghtInput(distance);
 			
       }
 
