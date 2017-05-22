@@ -122,6 +122,7 @@ function updateTextInput(val) {
         }
 
 function getDistance(point1, point2)
+function getDistance(lat1, lat2, lon1, lon2)
 {
 	var R = 6371e3; // metres
 	var φ1 = lat1.toRadians();
@@ -136,6 +137,7 @@ function getDistance(point1, point2)
 
 	var d = R * c;
 	return 
+	return d;
 }
 
 function updateLenghtInput(val) {
