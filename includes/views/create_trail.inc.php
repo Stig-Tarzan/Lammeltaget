@@ -52,7 +52,7 @@
         });
 		 
      coordinates = poly.getPath().getArray();
-     alert(coordinates.toString());
+     
      if(coordinates.length > 1 ){
         alert('hej');
         for(var i=0; i<coordinates.length; i++){
@@ -65,9 +65,10 @@
         var lat2 = coord2[0];
         var lon2 = coord2[1];
 
+          
         i=i+1;
-        distance = distance + getDistance(lat1,lon1,lat2,lon2);
-        alert(getDistance(lat1,lon1,lat2,lon2));
+        distance = distance + getDistance(lat1.substring(1,lat1.length),lon1.substring(0,lon1.length-1),lat2.substring(1,lat2.length),lon2.substring(0,lon2.length-1));
+        
       }
   
      }

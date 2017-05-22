@@ -122,6 +122,7 @@ function updateTextInput(val) {
         }
 function getDistance(lat1, lon1 , lat2, lon2)
 {
+	alert(lat1);
 	var R = 6371e3; // metres
 	var φ1 = toRadians(lat1);
 	var φ2 = toRadians(lat2);
@@ -139,7 +140,7 @@ function getDistance(lat1, lon1 , lat2, lon2)
 
 function toRadians(val)
 {
-	return this * Math.PI / 180;
+	return val * Math.PI / 180;
 }
 
 function updateLenghtInput(val) {
