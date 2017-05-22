@@ -37,8 +37,21 @@ body
 	height: 70px;
 	bottom: 2%;
 	left: 	90%;
+#user_info
+{
+	position: absolute;
+	right: 135px;
+	top: 200px;
 }
-
+#user_info p
+{
+	margin: 0;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	color: #282828;
+}
 
 
 
@@ -96,6 +109,20 @@ body
 .button {
 	width: 100px;
 }
+
+
+#add_trail {
+	background-image: url('../img/add_trail.png');
+	background-size: cover;
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 2%;
+	left: 	90%;
+}
+
+
+
 
 
 /* styling for search_container and its contents*/

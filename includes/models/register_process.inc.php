@@ -1,19 +1,24 @@
 <?php
 	include '../bootstrap.php';
-
-	$user_name = $_POST['username_value'];
-	$email = $_POST['email_value'];				
-	$password = $_POST['password_value'];
-
-	$sql = "INSERT INTO user (userName, email, password) 
-				VALUES ('$user_name', '$email', '$password')";					
 	
-	$result = mysqli_query($conn, $sql);
-	if ($result) 
+	if (isset($_POST['username_value'])) 
 	{
-		echo "Successful insert";
-	}
-	else
-	{
-		echo "Failed insert";
+		$user_name = $_POST['username_value'];
+		$email = $_POST['email_value'];
+		$password =$_POST['password_value'];
+		$user_salt = substr(sha1(mt_rand()),0,22);
+		$encrypted_password = sha1($password.$user_salt);
+
+		$sql = "INSERT INTO user (userName, email, password, salt) 
+			VALUES ('$user_name', '$email', '$encrypted_password', '$user_salt')";	
+		
+		$result = mysqli_query($conn, $sql);
+		if ($result) 
+		{
+			echo "Successful registration";
+		}
+		else
+		{
+			echo "Failed registration";
+		}
 	}
