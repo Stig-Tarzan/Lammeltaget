@@ -54,24 +54,21 @@
      coordinates = poly.getPath().getArray();
      
      if(coordinates.length > 1 ){
-        alert('hej');
-        for(var i=0; i<coordinates.length; i++){
+        
           
-        var coord1 = coordinates[i].toString().split(',');
+        var coord1 = coordinates[coordinates.length - 2].toString().split(',');
         var lat1 = coord1[0];
         var lon1 = coord1[1];
 
-        var coord2  = coordinates[i+1].toString().split(',');
+        var coord2  = coordinates[coordinates.length -1].toString().split(',');
         var lat2 = coord2[0];
         var lon2 = coord2[1];
 
-          
-        i=i+1;
         distance = distance + getDistance(lat1.substring(1,lat1.length),lon1.substring(0,lon1.length-1),lat2.substring(1,lat2.length),lon2.substring(0,lon2.length-1));
         
       }
   
-     }
+     
      
      updateLenghtInput(distance);
 			
