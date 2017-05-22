@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 	$('#user_info').load('includes/views/user.inc.php');
 
-	//*************log in*********************************
+	//*************log out*********************************
 	$('#user_info').on('click', '#log_out_button',function () {
 
 		$.post("includes/models/log_out_process.inc.php",{}, function(data, status)

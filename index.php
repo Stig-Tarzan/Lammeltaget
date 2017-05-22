@@ -1,5 +1,7 @@
  <?php
 session_start(); 
+
+
  ?>
 
  <!DOCTYPE html
@@ -13,7 +15,18 @@ session_start();
             <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
             <script type="text/javascript" src="assets/js/main.js"></script>
             
-            
+<?php
+    if (isset($_SESSION['user_name'])) 
+    {
+        echo "<style>
+                #user_section
+        {
+            display: none;
+        }
+            </style>
+        " ;      
+    }
+?>
 
 
             </a><title>Lämmeltåget</title>
