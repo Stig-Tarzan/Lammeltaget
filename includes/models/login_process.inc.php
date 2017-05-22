@@ -17,13 +17,13 @@ if (isset($_POST['username_value']))
 
 		if ($new_hash != $db_hash)
 		{
-			echo "Failed log in";	
+				
 		}
 		else
 		{
 			$sql = "SELECT * FROM user WHERE userName='$user_name' AND password='$db_hash'"; 
 			$result = mysqli_query($conn, $sql);	
 			$_SESSION['user_name'] = $row['userName'];
-			echo $_SESSION['user_name'];
+			echo "true";
 		}
 	}

@@ -5,6 +5,16 @@ $(document).ready(function () {
 
 	$('#user_info').load('includes/views/user.inc.php');
 
+	$.post("includes/models/session_status.inc.php",{}, function(data, status)
+	{
+
+		if(data == 'false'){
+
+			$("#user_section").css("display", "flex");
+	
+		}
+	});		
+
 	//*************log out*********************************
 	$('#user_info').on('click', '#log_out_button',function () {
 
@@ -74,9 +84,20 @@ $(document).ready(function () {
 				data
 			, function(data, status)
 			{
-				window.location.href = 'index.php';
+				
+				if (data == 'true') 
+				{
+					$("#user_section").css("display", "none");
+					$('#user_info').load('includes/views/user.inc.php');
+				}
+				else
+				{
+					$("#user_section input").css("border", "solid 1px red");
+				}
+
 			});		
 		}
+
 	//***************************************************
 
 

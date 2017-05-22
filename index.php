@@ -14,19 +14,6 @@ session_start();
             <meta charset='utf-8'>
             <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
             <script type="text/javascript" src="assets/js/main.js"></script>
-            
-<?php
-    if (isset($_SESSION['user_name'])) 
-    {
-        echo "<style>
-                #user_section
-        {
-            display: none;
-        }
-            </style>
-        " ;      
-    }
-?>
 
 
             </a><title>Lämmeltåget</title>
