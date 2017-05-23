@@ -1,5 +1,18 @@
+<!--api key texteditor 6hi1dybxyo7ndy05dqzdztbn0l40e8vaufi8vpu5q52e7nz8
+
+ -->
 <?php
 	$trail_input = "
+
+
+
+			 
+
+			 
+
+
+                
+
 			<input name='trail_name_value' id='trail_name' placeholder='Namge din led'>
 			
 			<label>Svårighet</label>
@@ -7,9 +20,11 @@
 			<input type='text' id='trail_current_difficulty' value='1'>
 
 			<input name='trail_lenght_value' id='trail_length' placeholder='ledlängd'>
-			<input type='textarea' name='trail_info_value' id='trail_info' placeholder='Ange information om led' >
+			<textarea name='trail_info_value' id='trail_info' placeholder='Ange information om led' ></textarea>
 			<input type='hidden' name='trail_creation_date_value' value='value='".date('Y-m-d H:i:s')."'>
 			<button id='register_trail_button' class='button'> Registrera Led</button> 
+				
+
 
 	";
 
