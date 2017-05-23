@@ -20,7 +20,7 @@
 			<input type='text' id='trail_current_difficulty' value='1'>
 
 			<input name='trail_lenght_value' id='trail_length' placeholder='ledlängd'>
-			<input type='textarea' name='trail_info_value' id='trail_info' placeholder='Ange information om led' >
+			
 			<input type='hidden' name='trail_creation_date_value' id='trail_creation_date' value='".date('Y-m-d H:i:s')."'> 
 			<textarea name='trail_info_value' id='trail_info' placeholder='Ange information om led' ></textarea>
 			<input type='hidden' name='trail_creation_date_value' value='value='".date('Y-m-d H:i:s')."'>
