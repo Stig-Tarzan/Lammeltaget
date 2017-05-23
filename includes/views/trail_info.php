@@ -8,7 +8,7 @@
 
 			<input name='trail_lenght_value' id='trail_length' placeholder='ledlängd'>
 			<input type='textarea' name='trail_info_value' id='trail_info' placeholder='Ange information om led' >
-			<input type='hidden' name='trail_creation_date_value' value='value='".date('Y-m-d H:i:s')."'>
+			<input type='hidden' name='trail_creation_date_value' id='trail_creation_date' value='".date('Y-m-d H:i:s')."'> 
 			<button id='register_trail_button' class='button'> Registrera Led</button> 
 
 	";

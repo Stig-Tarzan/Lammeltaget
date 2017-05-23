@@ -72,19 +72,34 @@
 
     $('#content_bot').on('click', '#register_trail_button',function () 
     {
-      var trail_name_value = $('#trail_name_value').val();
-      var difficulty_value = $('#trail_difficulty').val();
-      $.post('includes/models/session_status.inc.php',{}, function(data, status)
-      {
-      if(data == 'false'){
+      var trail_name_value = $('#trail_name').val();
+      var trail_difficulty_level_value = $('#trail_difficulty').val();
+      var trail_creation_date_value = $('#trail_creation_date').val();
+      var trail_info_value = $('#trail_info').val();
+      var trail_shape_value = poly.getPath().getArray().toString();
+      var trail_length_value = $('#trail_length').val();
 
-      $("#user_section").css("display", "flex");
-  
-    }
-  }); 
-    });
-			
+      var data = 
+      { 
+        trail_name_value: trail_name_value, 
+        trail_difficulty_level_value: trail_difficulty_level_value, 
+        trail_creation_date_value: trail_creation_date_value,
+        trail_info_value: trail_info_value,
+        trail_shape_value: trail_shape_value,
+        trail_length_value: trail_length_value  
       }
+
+
+      $.post('includes/models/trail_process.inc.php', 
+        data
+        ,function(data, status)
+      {
+        alert(data);
+      });
+    });
+}
+			
+      
 
     </script>
     <script async defer

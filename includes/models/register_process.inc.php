@@ -13,12 +13,12 @@
 			VALUES ('$user_name', '$email', '$encrypted_password', '$user_salt')";	
 		
 		$result = mysqli_query($conn, $sql);
-		if ($result) 
+		if (!$result) 
 		{
-			echo "Successful registration";
+			echo "Failed registration";
 		}
 		else
 		{
-			echo "Failed registration";
+			echo "Successful registration";
 		}
 	}
