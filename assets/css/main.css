@@ -198,7 +198,7 @@ body
 
 }
 #trail_current_difficulty {
-	width: 1em;
+	width: 10em;
 	margin-right: 70%;
 	font-weight: bolder;
 	border: none;
@@ -209,7 +209,7 @@ body
 }
 #trail_difficulty {
 
-	width: 70px;
+	width: 100px;
 	position: relative;
 	vertical-align: middle;
 
