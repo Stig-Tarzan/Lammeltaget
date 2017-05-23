@@ -67,13 +67,21 @@
         distance = distance + getDistance(lat1.substring(1,lat1.length),lon1.substring(0,lon1.length-1),lat2.substring(1,lat2.length),lon2.substring(0,lon2.length-1));
         
       }
-  
-     
      
      updateLenghtInput(distance);
-     $('#content_bot').on('click', '#register_trail_button',function () {
-    
-        
+
+    $('#content_bot').on('click', '#register_trail_button',function () 
+    {
+      var trail_name_value = $('#trail_name_value').val();
+      var difficulty_value = $('#trail_difficulty').val();
+      $.post('includes/models/session_status.inc.php',{}, function(data, status)
+      {
+      if(data == 'false'){
+
+      $("#user_section").css("display", "flex");
+  
+    }
+  }); 
     });
 			
       }
