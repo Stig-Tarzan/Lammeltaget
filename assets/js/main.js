@@ -196,7 +196,6 @@ function toRadians(val)
 
 function updateLenghtInput(val) {
 
-	
-        document.getElementById('trail_length').value=val; 
+	document.getElementById('trail_length').value=val; 
 }
 
