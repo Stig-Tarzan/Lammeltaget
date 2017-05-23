@@ -36,8 +36,8 @@ var poly_total;
 	$('#search_container').on('click', '#search_button',function () {
 		
 		$('#filter_container').load('includes/views/filters.inc.php');
-
-		$('#content_top').load('includes/views/trails.inc.php');
+		$('#content_top').load('includes/models/display_trail_list_process.inc.php');
+		$('#content_bot').empty();
 	});
 
 	$('#user_section').on('click', '#register_button',function () {
