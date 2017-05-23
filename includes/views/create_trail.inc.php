@@ -70,8 +70,7 @@
       }
      
     updateLenghtInput(distance);
-      
-    setPoly(poly.getPath().getArray().toString());
+
 
 }
 			
