@@ -172,3 +172,22 @@ body
 	min-height: 150px;
 }
 
+/* styling for trails/maps and its contents info_content/bottom*/
+
+#content_bot {
+	position: relative;
+	height: 40%;
+	min-height: 200px;
+}
+#trail_length {
+	font-weight: bolder;
+	font-size: 2em;
+	border: none;
+	margin: auto;
+
+}
+#trail_current_difficulty {
+	width: 2em;
+	margin: auto;
+
+}
