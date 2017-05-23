@@ -71,6 +71,10 @@
      
      
      updateLenghtInput(distance);
+     $('#content_bot').on('click', '#register_trail_button',function () {
+    
+        
+    });
 			
       }
 
