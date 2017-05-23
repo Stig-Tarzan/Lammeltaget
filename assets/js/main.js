@@ -157,7 +157,20 @@ var poly_total;
 
 });
 function updateTextInput(val) {
-          document.getElementById('trail_current_difficulty').value=val; 
+		var difficulty = ""
+		switch(val){
+			case '1': difficulty="Nybörjare";
+					break;
+			case '2': difficulty="Enkel";
+					break;
+			case '3': difficulty="Medel";
+					break;
+			case '4': difficulty="Erfaren";
+					break;
+			case '5': difficulty="Svår";
+					break;
+		}
+        document.getElementById('trail_current_difficulty').value=difficulty; 
         }
 function getDistance(lat1, lon1 , lat2, lon2)
 {
@@ -183,10 +196,10 @@ function toRadians(val)
 
 function updateLenghtInput(val) {
 
-          document.getElementById('trail_length').value=val; 
-        }
 
 function setPoly(poly)
 {
 	this.poly_total = poly;
+        document.getElementById('trail_length').value=val; 
 }
+
