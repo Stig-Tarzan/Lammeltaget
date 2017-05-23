@@ -4,15 +4,6 @@
 <?php
 	$trail_input = "
 
-
-
-			 
-
-			 
-
-
-                
-
 			<input name='trail_name_value' id='trail_name' placeholder='Namge din led'>
 			
 			<label>Svårighet</label>
