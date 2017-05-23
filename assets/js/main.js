@@ -152,6 +152,12 @@ var poly_total;
 		$('#content_bot').load('includes/views/trail_info.inc.php');
 
 	});
+	$('#main_section').on('click', '#undo_icon',function () 
+	{
+		
+		$('#content_top').load('includes/models/undo_in_trail_process.inc.php');
+
+	});
 
 	
 
