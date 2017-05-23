@@ -150,12 +150,14 @@ var poly_total;
 
 		$('#content_top').load('includes/views/create_trail.inc.php');
 		$('#content_bot').load('includes/views/trail_info.inc.php');
+		$("#add_trail").css("display", "none");
 
 	});
 	$('#main_section').on('click', '#undo_icon',function () 
 	{
 		
-		$('#content_top').load('includes/models/undo_in_trail_process.inc.php');
+		$('#content_top').load('includes/views/create_trail.inc.php');
+
 
 	});
 

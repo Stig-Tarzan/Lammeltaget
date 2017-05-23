@@ -12,7 +12,7 @@
     <script>
 
 
-    // poly är en array som inehåller kordinater för alla polylines. kan sparas för representera trail i DB.
+    // poly kan användas som array som inehåller kordinater för alla polylines. kan sparas för representera trail i DB.
       var poly;
 
       var map;
@@ -32,7 +32,7 @@
         });
         poly.setMap(map);
 
-        // Add a listener for the click event
+        // Add a listener for the click event 
         map.addListener('click', addLatLng);
       }
 
@@ -51,7 +51,11 @@
           map: map
 
         });
+
 		 
+
+
+
      coordinates = poly.getPath().getArray();
      
      if(coordinates.length > 1 ){
@@ -70,6 +74,7 @@
       }
      
     updateLenghtInput(distance);
+    
 
 
 }
