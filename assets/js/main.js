@@ -149,7 +149,7 @@ var poly_total;
 	{
 
 		$('#content_top').load('includes/views/create_trail.inc.php');
-		$('#content_bot').load('includes/views/trail_info.php');
+		$('#content_bot').load('includes/views/trail_info.inc.php');
 
 	});
 
@@ -196,7 +196,6 @@ function toRadians(val)
 
 function updateLenghtInput(val) {
 
-	
-        document.getElementById('trail_length').value=val; 
+	document.getElementById('trail_length').value=val; 
 }
 
