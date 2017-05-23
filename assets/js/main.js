@@ -12,6 +12,7 @@ var poly_total;
 
 		if(data == 'false'){
 
+			$("#add_trail").css("display", "none");
 			$("#user_section").css("display", "flex");
 	
 		}
@@ -91,6 +92,7 @@ var poly_total;
 				{
 					$("#user_section").css("display", "none");
 					$('#user_info').load('includes/views/user.inc.php');
+					$("#add_trail").css("display", "flex");
 				}
 				else
 				{
