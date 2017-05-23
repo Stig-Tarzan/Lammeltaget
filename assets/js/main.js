@@ -16,6 +16,10 @@ var poly_total;
 			$("#user_section").css("display", "flex");
 	
 		}
+		else
+		{
+			$("#add_trail").css("display", "flex");
+		}
 	});		
 
 	//*************log out*********************************
