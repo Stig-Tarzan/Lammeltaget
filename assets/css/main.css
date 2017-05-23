@@ -175,9 +175,14 @@ body
 /* styling for trails/maps and its contents info_content/bottom*/
 
 #content_bot {
-	position: relative;
-	height: 40%;
-	min-height: 200px;
+	padding-top: 20px;
+	display: inline-block;
+	padding-left: 5px;
+
+}
+#content_bot label {
+	font-weight: bolder;
+	font-family: Arial;
 }
 #trail_length {
 	font-weight: bolder;
@@ -187,7 +192,22 @@ body
 
 }
 #trail_current_difficulty {
-	width: 2em;
+	width: 1em;
 	margin: auto;
+	font-weight: bolder;
+	border: none;
+	vertical-align: middle;
 
+
+}
+#trail_difficulty {
+
+	width: 70px;
+
+	vertical-align: middle;
+
+
+}
+#trail_name{
+	margin-right: 90%; 
 }
