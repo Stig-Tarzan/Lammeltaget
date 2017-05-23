@@ -196,10 +196,7 @@ function toRadians(val)
 
 function updateLenghtInput(val) {
 
-
-function setPoly(poly)
-{
-	this.poly_total = poly;
+	
         document.getElementById('trail_length').value=val; 
 }
 
