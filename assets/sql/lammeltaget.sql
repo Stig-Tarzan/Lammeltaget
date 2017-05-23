@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 22 maj 2017 kl 08:55
+-- Tid vid skapande: 23 maj 2017 kl 11:16
 -- Serverversion: 5.7.14
 -- PHP-version: 5.6.25
 
@@ -67,12 +67,14 @@ CREATE TABLE `map` (
 CREATE TABLE `trail` (
   `trailID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
-  `rating` int(11) NOT NULL,
-  `upVotes` int(11) NOT NULL,
-  `downVotes` int(11) NOT NULL,
-  `difficultyLevel` int(5) NOT NULL,
+  `trailName` varchar(11) NOT NULL,
   `creationDate` date NOT NULL,
-  `trailInfoText` text NOT NULL
+  `trailInfoText` text NOT NULL,
+  `trailShape` text NOT NULL,
+  `difficultyLevel` int(5) NOT NULL,
+  `trailLength` int(111) DEFAULT NULL,
+  `upVotes` int(11) DEFAULT NULL,
+  `downVotes` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -184,7 +186,7 @@ ALTER TABLE `map`
 -- AUTO_INCREMENT för tabell `trail`
 --
 ALTER TABLE `trail`
-  MODIFY `trailID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `trailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT för tabell `user`
 --
