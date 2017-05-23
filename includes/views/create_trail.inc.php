@@ -6,7 +6,7 @@
  -->
 <?php
 
-
+  
  	 $googlemaps_api = "
  	 					<div id='map'></div>
     <script>
@@ -14,6 +14,7 @@
 
     // poly är en array som inehåller kordinater för alla polylines. kan sparas för representera trail i DB.
       var poly;
+
       var map;
       var distance = 0  ;
       var coordinates;
@@ -68,35 +69,10 @@
         
       }
      
-     updateLenghtInput(distance);
+    updateLenghtInput(distance);
+      
+    setPoly(poly.getPath().getArray().toString());
 
-    $('#content_bot').on('click', '#register_trail_button',function () 
-    {
-      var trail_name_value = $('#trail_name').val();
-      var trail_difficulty_level_value = $('#trail_difficulty').val();
-      var trail_creation_date_value = $('#trail_creation_date').val();
-      var trail_info_value = $('#trail_info').val();
-      var trail_shape_value = poly.getPath().getArray().toString();
-      var trail_length_value = $('#trail_length').val();
-
-      var data = 
-      { 
-        trail_name_value: trail_name_value, 
-        trail_difficulty_level_value: trail_difficulty_level_value, 
-        trail_creation_date_value: trail_creation_date_value,
-        trail_info_value: trail_info_value,
-        trail_shape_value: trail_shape_value,
-        trail_length_value: trail_length_value  
-      }
-
-
-      $.post('includes/models/trail_process.inc.php', 
-        data
-        ,function(data, status)
-      {
-        alert(data);
-      });
-    });
 }
 			
       

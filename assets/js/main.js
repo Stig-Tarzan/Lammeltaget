@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+var poly_total;
+
 	$('#search_container').load('includes/views/search.inc.php');
 	$('#user_section').load('includes/views/login.inc.php');
 
@@ -97,18 +99,47 @@ $(document).ready(function () {
 
 			});		
 		}
+	});	
 
 	//***************************************************
 
 
+	//*************Register trail*********************
+    $('#content_bot').on('click', '#register_trail_button',function () 
+
+    {
+      var trail_name_value = $('#trail_name').val();
+      var trail_difficulty_level_value = $('#trail_difficulty').val();
+      var trail_creation_date_value = $('#trail_creation_date').val();
+      var trail_info_value = $('#trail_info').val();
+      var trail_shape_value = poly_total;
+      var trail_length_value = $('#trail_length').val();
+
+      var data = 
+      { 
+        trail_name_value: trail_name_value, 
+        trail_difficulty_level_value: trail_difficulty_level_value, 
+        trail_creation_date_value: trail_creation_date_value,
+        trail_info_value: trail_info_value,
+        trail_shape_value: trail_shape_value,
+        trail_length_value: trail_length_value  
+      }
+
+
+      $.post('includes/models/trail_process.inc.php', 
+        data
+        ,function(data, status)
+      {
+        alert(data);
+      });
+    });
+	//***************************************************
+
 	
-	});	
 
-	$('#main_section').on('click', '#add_trail',function () {
+	$('#main_section').on('click', '#add_trail',function () 
+	{
 
-		
-		
-		
 		$('#content_top').load('includes/views/create_trail.inc.php');
 		$('#content_bot').load('includes/views/trail_info.php');
 
@@ -147,4 +178,7 @@ function updateLenghtInput(val) {
           document.getElementById('trail_length').value=val; 
         }
 
-
+function setPoly(poly)
+{
+	poly_total = poly;
+}
