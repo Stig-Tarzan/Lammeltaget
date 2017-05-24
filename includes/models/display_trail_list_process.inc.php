@@ -10,7 +10,12 @@
 			$trail_name = $row['trailName'];
 
 			echo "<div id='".$trail_name."' class='trails_in_list'>"; 
-			echo "<img src='assets/img/maps_icon.png' class='trail_img'>";
-			echo $trail_name;
+			echo "<img src='assets/img/maps_icon.png' class='trail_img'><div class='trail_content_info'>";
+			echo "<label id='trail_name_in_list'>" . $trail_name . "</label> <br>";
+			echo "<label class='trail_list_difficulty'>Svårighet:<label>" . $row['difficultyLevel'] . "<br>";
+			echo "<label class='trail_list_length'>Längd:<label>" . $row['trailLength'];
+			
+			echo "</div>";
+			echo "<label class='trail_list_rating'>" .($row['upVotes']-$row['downVotes']) .  "<label>";
 			echo "</div>";
 		}
