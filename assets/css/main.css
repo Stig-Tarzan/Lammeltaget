@@ -46,6 +46,17 @@ body
 	height: 70px;
 	bottom: 15%;
 	left: 	90%;
+	display: none;
+}
+#save_icon {
+	background-image: url('../img/save_icon.png');
+	background-size: cover;
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 2%;
+	left: 	90%;
+	display: none;
 }
 #user_info
 {
