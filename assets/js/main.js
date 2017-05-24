@@ -111,7 +111,7 @@ var poly_total;
 
 
 	//*************Register trail*********************
-    $('#content_bot').on('click', '#register_trail_button',function () 
+    $('#main_section').on('click', '#save_icon',function () 
 
     {
       var trail_name_value = $('#trail_name').val();
@@ -154,6 +154,8 @@ var poly_total;
 		$('#content_top').load('includes/views/create_trail.inc.php');
 		$('#content_bot').load('includes/views/trail_info.inc.php');
 		$("#add_trail").css("display", "none");
+		$('#undo_icon').css("display", "flex");
+		$('#save_icon').css("display", "flex");
 
 	});
 	$('#main_section').on('click', '#undo_icon',function () 

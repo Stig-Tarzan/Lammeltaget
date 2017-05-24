@@ -46,11 +46,22 @@ body
 	height: 70px;
 	bottom: 15%;
 	left: 	90%;
+	display: none;
+}
+#save_icon {
+	background-image: url('../img/save_icon.png');
+	background-size: cover;
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 2%;
+	left: 	90%;
+	display: none;
 }
 #user_info
 {
 	position: absolute;
-	right: 135px;
+	left: 90%;
 	top: 200px;
 }
 #user_info p
@@ -76,6 +87,7 @@ body
 	background-color: rgb(255,255,255);
 	width: 70%;
   	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  	min-width: 350px;
 }
 
 #main_section p
@@ -134,7 +146,6 @@ body
 
 
 
-
 /* styling for search_container and its contents*/
 
 #search_container{
@@ -171,14 +182,28 @@ body
 	padding: 5px;
 }
 
+/* styling for trail list and its contents*/
+
+.trail_img {
+	width: 70px;
+	height: 70px;
+	border-radius: 5px;
+	border: 3px solid rgb(54, 196, 182);
+	padding:2px;
+}
+
+
 /* styling for trails/maps and its contents*/
 
 
 
 #map {
-	width: 900px;
-	height:500px ;
-	min-height: 150px;
+	width: 100%;
+	height: 50%;
+	max-width: 900px;
+	
+	min-height: 500px;
+	min-width: 350px;
 }
 
 /* styling for trails/maps and its contents info_content/bottom*/
@@ -235,5 +260,5 @@ body
 	max-width: 700px;
 	float: middle;
 	margin-right: 20%;
-	
+	margin-bottom:20px;
 }
