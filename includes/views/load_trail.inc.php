@@ -5,9 +5,10 @@
 
  -->
 <?php
-
   
- 	 $googlemaps_api = "
+  $selected_trail = $_POST['selected_trail'];
+  
+ 	$googlemaps_api = "
  	 					<div id='map'></div>
     <script>
 
@@ -16,13 +17,16 @@
       var poly;
 
       var map;
-      var distance = 0  ;
-      var coordinates;
+      var selected_trail = '$selected_trail';
+      alert(selected_trail);
 
-      
+      var path_array = selected_trail.split(',');
+      var path;
 
-      for ($i=0; $i <   ; $i++) { 
-        # code...
+
+      for (var i=0; i < path_array.count; i+2) 
+      { 
+        path= path + 'lat: '+ path_array[i] +', ' + 'lng: ' + path_array[i+1];
       }
 
       var path_line= [
@@ -38,9 +42,9 @@
           center: {lat: 59.853642, lng: 17.634966}
         });
 
-        poly.setMap(map);
+       
       }
-}
+
 			
       
 

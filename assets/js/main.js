@@ -143,7 +143,19 @@ var poly_total;
 	//***************************************************
 
 	//*************Load trail*********************
-	
+    $('#content_top').on('click', '.trails_in_list',function () 
+    {
+    	var trail_name = this.id;
+    	var data = {trail_name_value: trail_name};
+    	$.post("includes/models/get_trail.inc.php", 
+			data
+			, function(data, status)
+     		{
+        		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data});
+      		});
+    	});
+
+
 //***************************************************
 
 	
