@@ -118,11 +118,10 @@ var poly_total;
       var trail_difficulty_level_value = $('#trail_difficulty').val();
       var trail_creation_date_value = $('#trail_creation_date').val();
       var trail_info_value = $('#trail_info').val();
-      var trail_shape_value = poly.getPath().getArray().toString();
+      var trail_shape_value_raw = poly.getPath().getArray().toString();
+      var trail_shape_value = trail_shape_value_raw.replace(/[() ]/g, '');
       var trail_length_value = $('#trail_length').val();
-
-      alert(trail_shape_value);	 
-
+   
       var data = 
       { 
         trail_name_value: trail_name_value, 
@@ -142,6 +141,10 @@ var poly_total;
       });
     });
 	//***************************************************
+
+	//*************Load trail*********************
+	
+//***************************************************
 
 	
 
