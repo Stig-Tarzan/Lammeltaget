@@ -156,9 +156,19 @@ var poly_total;
     	});
 
 
-//***************************************************
+	//***************************************************
+
+	//*************filter trail*********************
+$('#filter_container').on('click', '.filter_button',function () {
+
+		var trail_filter = this.id;
+		
+
+		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
+	});
 
 	
+	//***************************************************
 
 	$('#main_section').on('click', '#add_trail',function () 
 	{

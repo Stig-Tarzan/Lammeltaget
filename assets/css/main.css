@@ -206,6 +206,7 @@ body
 	padding-bottom: 3px;
 	border-bottom: 1px rgb(225, 237, 235) solid;
 	padding-top: 3px;
+	position: relative;
 
 }
 .trail_list_rating{
@@ -219,6 +220,14 @@ body
 	font-family: arial;
 	font-size: 1,2em;
 
+}
+.trail_list_date {
+	
+	font-size: 1em;
+	
+	left:79%;
+	bottom: 0;
+	position: absolute;
 }
 
 /* styling for trails/maps and its contents*/

@@ -1,7 +1,8 @@
 <?php
 
-	$trail_filters = "<button class='button' id='date_button' name='date_button'><p>Datum</p></button>
-					  <button class='button' id='alphabetical_button' name='alphabetical_button'><p>A-Ö</p></button>
-					  <button class='button' id='rating_button' name='rating_button'><p>Rating</p></button>";
+	$trail_filters = "<button  class='filter_button' id='creationDate' name='date_button'><p>Datum</p></button>
+					  <button  class='filter_button' id='trailName' name='alphabetical_button'><p>A-Ö</p></button>
+					  <button  class='filter_button' id='(upVotes-downVotes)' name='rating_button'><p>Rating</p></button>
+					  ";
 
 	echo $trail_filters;

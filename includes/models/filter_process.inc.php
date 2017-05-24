@@ -1,8 +1,15 @@
 <?php
 	include '../bootstrap.php';
 	session_start();
+	$filter = $_POST['filter'];
+	if ($filter=='trailName' || $filter == 'creationDate'){
+		$order = 'ASC';
+	}
+	else {
+		$order = 'DESC';
+	}
 
-	$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID";
+	$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID ORDER BY $filter $order";
 	$result = mysqli_query($conn, $sql);
 
 		while ($row = $result->fetch_assoc())  //Runs through the entire result
