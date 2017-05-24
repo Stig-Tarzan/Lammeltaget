@@ -18,16 +18,16 @@
 
       var map;
       var selected_trail = '$selected_trail';
-      alert(selected_trail);
+   
 
       var path_array = selected_trail.split(',');
       var path;
 
-
       for (var i=0; i < path_array.count; i+2) 
       { 
-        path= path + 'lat: '+ path_array[i] +', ' + 'lng: ' + path_array[i+1];
+        path= path + '{lat: '+ path_array[i] +', ' + 'lng: ' + path_array[i+1] + '},' ;
       }
+      alert(path);
 
       var path_line= [
       {lat: 59.637714606663124, lng: 17.085216497071087},
@@ -39,6 +39,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
+          path: path,
           center: {lat: 59.853642, lng: 17.634966}
         });
 
