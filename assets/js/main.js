@@ -196,6 +196,8 @@ var poly_total;
 				{});
 		
     });
+    
+	//***************************************************
 
 	//*************filter trail*********************
 $('#filter_container').on('click', '.filter_button',function () {
