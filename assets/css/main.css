@@ -33,34 +33,30 @@ body
 }
 
 
-#add_trail {
-	background-image: url('../img/add_trail.png');
-	background-size: cover;
-	position: fixed;
-	width: 70px;
-	height: 70px;
-	bottom: 2%;
-	left: 	90%;
-}
+
 #undo_icon {
-	background-image: url('../img/undo.png');
-	background-size: cover;
+
 	position: fixed;
 	width: 70px;
 	height: 70px;
 	bottom: 15%;
 	left: 	90%;
 	display: none;
+	border: 3px solid #9187a1;
+	
+
+	border-radius: 100px
 }
 #save_icon {
-	background-image: url('../img/save_icon.png');
-	background-size: cover;
+
 	position: fixed;
 	width: 70px;
 	height: 70px;
 	bottom: 2%;
 	left: 	90%;
 	display: none;
+	border-radius: 100px;
+	border: 3px solid #9187a1;
 }
 #user_info
 {
@@ -218,13 +214,16 @@ a#user_steg {
 
 
 #add_trail {
-	background-image: url('../img/add_trail.png');
-	background-size: cover;
+	
 	position: fixed;
 	width: 70px;
 	height: 70px;
 	bottom: 2%;
 	left: 	90%;
+	border: 3px solid #9187a1;
+	
+
+	border-radius: 100px
 }
 
 
@@ -256,7 +255,7 @@ a#user_steg {
 	display: inline-block;
 	vertical-align: baseline;
 	padding-right: 10px;
-	border-bottom: 3px rgb(225, 237, 235) solid;	
+	border-bottom:2px solid rgb(255, 232, 163);	
 
 }
 #filter_container button {
@@ -383,4 +382,36 @@ a#user_steg {
 	float: middle;
 	margin-right: 20%;
 	margin-bottom:20px;
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 70px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #9187a1;
+  cursor: pointer;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  padding: 0;
+  margin:0;
+  border: 0;
 }

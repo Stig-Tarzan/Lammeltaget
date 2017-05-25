@@ -1,4 +1,18 @@
+var mouse_is_inside = false;
+
+
 $(document).ready(function () {
+
+    $('#profile_section').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside) $('#profile_section').hide();
+    });
+
 
 var poly_total;
 
@@ -59,14 +73,14 @@ var poly_total;
 	//*************profile info*****************************
 
 	$('.banner').on('click', '#username_button',function () {
-
+		$('#profile_section').load('includes/views/profile.inc.php');
 
 		$('#profile_section').css('width', '20%');
 		$('#profile_section').css('display', 'flex');
 		$('#profile_section').css('box-shadow', '0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22)');	
 		
 		
-		$('#profile_section').load('includes/views/profile.inc.php');
+		
 
 	});
 
@@ -78,7 +92,7 @@ var poly_total;
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
 		
-		$('#profile_section').css('display', 'none');
+		
 		
 		
 		$('#content_top').load('includes/views/my_trails.inc.php');
