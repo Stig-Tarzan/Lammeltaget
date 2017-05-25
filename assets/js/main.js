@@ -167,7 +167,6 @@ var poly_total;
 			, function(data, status)
      		{
         		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data});
-        		$('#content_top').load('includes/views/trail_view.inc.php');
       		});
     	});
 
@@ -179,10 +178,12 @@ var poly_total;
     {
     	var trail_name = this.id;
     	var data = {trail_name_value: trail_name};
-    	$.post("includes/models/up_vote_trail.inc.php", 
+    	$.post("includes/models/get_trail.inc.php", 
 			data
-			, function(data, status) 
-			{});
+			, function(data, status)
+			{
+				alert(data);
+			});
     });
 	
 
