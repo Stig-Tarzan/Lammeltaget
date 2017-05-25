@@ -191,16 +191,36 @@ var poly_total;
 			, function(data, status)
      		{
         		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data, trail_name: trail_name});
+        		$('#content_bot').css('display', 'initial');
+        		$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: trail_name});
       		});
     	});
-
-
 	//***************************************************
 
+	//*************Post comment*************************
+	 $('#content_bot').on('click', '#submit_comment',function () 
+    {
+    	var comment_input = $('#comment_input').val();
+    	var comment_trail_name = $('#comment_trail_name').val();
+    	var comment_date = $('#comment_date').val();
+    	var data = 
+    		{comment_input: comment_input, 
+    		comment_trail_name: comment_trail_name,
+    		comment_date: comment_date 
+    		};
+
+    	$.post("includes/models/comment_set.inc.php", 
+			data
+			, function(data, status)
+			{
+				alert(data);
+			});
+
+    });
 	//*************Rate trail*************************
 	$('#content_top').on('click', '#upvote_trail_button',function () 
     {
-    	var trail_name = $('#vote_trail_name').val();;
+    	var trail_name = $('#vote_trail_name').val();
     	var data = {trail_name_value: trail_name};
     	$.post("includes/models/up_vote_trail.inc.php", 
 			data
@@ -213,7 +233,7 @@ var poly_total;
 
 	$('#content_top').on('click', '#downvote_trail_button',function () 
     {
-    	var trail_name = $('#vote_trail_name').val();;
+    	var trail_name = $('#vote_trail_name').val();
     	var data = {trail_name_value: trail_name};
     	$.post("includes/models/down_vote_trail.inc.php", 
 			data

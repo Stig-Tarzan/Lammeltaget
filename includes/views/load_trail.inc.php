@@ -41,7 +41,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: {lat: 59.853642, lng: 17.634966},
+          center: path_extended[0],
           mapTypeId: 'terrain'
         });
 
