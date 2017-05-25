@@ -1,9 +1,11 @@
 <?php
+
+include '../bootstrap.php';
 session_start(); 
 
 	if(isset($_SESSION['user_name']))
 	{
-		$loged_in = $_SESSION['userID'];
+		$loged_in = $_SESSION['user_id'];
 		$steps = 0;
 		
 
@@ -17,9 +19,10 @@ session_start();
 		}
 
 		echo "
-				<a id='username_welcome'>" .$_SESSION['user_name'] ."</a>
+				<div id='username_welcome'>" .$_SESSION['user_name'] ."<a id='user_steg'>Steg " .$steps ."</a></div>
+				
 				<a class='banner_obj' id='log_out_button'>Logga ut </a>
-				<div id='user_steg'>" .$steps ."</div>
+				
 				
 				";	
 	}
