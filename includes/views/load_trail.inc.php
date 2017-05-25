@@ -61,8 +61,8 @@
     src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZvUPwL77h619fuPWHSSodVSsgoz51n0&callback=initMap'>
     </script>
             ";
-            
+
   echo $googlemaps_api;
-  echo "<input id='vote_trail_name' value='$trail_name'></input>";
+  echo "<input type='hidden' id='vote_trail_name' value='$trail_name'></input>";
   echo "<button id='upvote_trail_button'>Up vote</button>";
   echo "<button id='downvote_trail_button'>Down vote</button>";
