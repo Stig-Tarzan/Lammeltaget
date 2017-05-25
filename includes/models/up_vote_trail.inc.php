@@ -2,11 +2,12 @@
 	include '../bootstrap.php';
 	session_start(); 
 
-	echo "Hej!";
-
+	echo $_POST['trail_name_value'];
 	if (isset($_POST['trail_name_value'])) 
 	{
-		$trail_name_value = $_POST['trail_name_value']);
+
+		$trail_name_value = $_POST['trail_name_value'];
+		echo $trail_name_value;
 		$sql="UPDATE trail SET upVotes = upVotes + 1 WHERE trailName = '$trail_name_value'";
 		$result = mysqli_query($conn, $sql);
 		if (!$result) 

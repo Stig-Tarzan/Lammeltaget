@@ -190,7 +190,7 @@ var poly_total;
 			data
 			, function(data, status)
      		{
-        		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data});
+        		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data, trail_name: trail_name});
       		});
     	});
 
@@ -200,9 +200,9 @@ var poly_total;
 	//*************Rate trail*************************
 	$('#content_top').on('click', '#upvote_trail_button',function () 
     {
-    	var trail_name = this.id;
+    	var trail_name = $('#vote_trail_name').val();;
     	var data = {trail_name_value: trail_name};
-    	$.post("includes/models/get_trail.inc.php", 
+    	$.post("includes/models/up_vote_trail.inc.php", 
 			data
 			, function(data, status)
 			{
@@ -213,13 +213,14 @@ var poly_total;
 
 	$('#content_top').on('click', '#downvote_trail_button',function () 
     {
-	   	var trail_name = this.id;
-	    	var data = {trail_name_value: trail_name};
-	    	$.post("includes/models/down_vote_trail.inc.php", 
-				data
-				, function(data, status) 
-				{});
-		
+    	var trail_name = $('#vote_trail_name').val();;
+    	var data = {trail_name_value: trail_name};
+    	$.post("includes/models/down_vote_trail.inc.php", 
+			data
+			, function(data, status)
+			{
+				alert(data);
+			});
     });
     
 	//***************************************************
