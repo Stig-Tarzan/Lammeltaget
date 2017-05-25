@@ -8,45 +8,51 @@
   
   $selected_trail = $_POST['selected_trail'];
   
- 	$googlemaps_api = "
- 	 					<div id='map'></div>
+  $googlemaps_api = "
+            <div id='map'></div>
     <script>
 
-
-    // poly kan användas som array som inehåller kordinater för alla polylines. kan sparas för representera trail i DB.
-      var poly;
-
       var map;
+      var flightPath;
       var selected_trail = '$selected_trail';
    
 
       var path_array = selected_trail.split(',');
-      var path;
+      var path_array_float = new Array();
+      var path_extended = new Array();
 
-      for (var i=0; i < path_array.count; i+2) 
-      { 
-        path= path + '{lat: '+ path_array[i] +', ' + 'lng: ' + path_array[i+1] + '},' ;
+      for (var i=0; i < path_array.length; i++)
+      {
+        path_array_float[i] = parseFloat(path_array[i]);
       }
-      alert(path);
 
-      var path_line= [
-      {lat: 59.637714606663124, lng: 17.085216497071087},
-      {lat: 59.642369436139475, lng: 17.09887218894437},
-      {lat: 59.64566603794365, lng: 17.10882854880765},
-      {lat: 59.6461865244132, lng: 17.122218136209995}
-      ];
-
+      for (var i=0; i < path_array_float.length-1; i++) 
+      { 
+          path_extended[i]=
+          {lat: path_array_float[i], lng: path_array_float[i+1]}
+      }
+      console.log(path_array_float.toString());
+     
+ 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          path: path,
-          center: {lat: 59.853642, lng: 17.634966}
+          center: {lat: 59.853642, lng: 17.634966},
+         
+        });
+      
+
+        path = new google.maps.Polyline({
+          path: path_extended,
+          
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
         });
 
-       
-      }
-
-			
+      path.setMap(map);
+}
+      
       
 
     </script>
@@ -56,5 +62,5 @@
 
 
 
-						";
-	echo $googlemaps_api;
+            ";
+  echo $googlemaps_api;
