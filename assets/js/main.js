@@ -56,6 +56,8 @@ var poly_total;
 		$('#filter_container').load('includes/views/filters.inc.php');
 		$('#content_top').load('includes/models/display_trail_list_process.inc.php');
 		$('#content_bot').empty();
+		$('#content_bot_2').empty();
+		$('#content_bot_2').css("display", "none");
 	});
 
 	$('#user_section').on('click', '#register_button',function () {
@@ -206,7 +208,10 @@ var poly_total;
      		{
         		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data, trail_name: trail_name});
         		$('#content_bot').css('display', 'initial');
+        		$('#content_bot_2').css('display', 'initial');
+
         		$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: trail_name});
+        		$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: trail_name});
       		});
     	});
 	//***************************************************
@@ -229,6 +234,7 @@ var poly_total;
 			{
 				alert(data);
 			});
+    	$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: comment_trail_name});
 
     });
 	//*************Rate trail*************************

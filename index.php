@@ -37,6 +37,7 @@ date_default_timezone_set('Europe/Stockholm');
 
                 <div id='content_top'><p>Välkommen ombord!</p></div>
                 <div id='content_bot'></div>
+                <div id='content_bot_2'></div>
                 <i id='undo_icon'class="material-icons">undo</i>
                 <i id='save_icon' class="material-icons">save</i>
 

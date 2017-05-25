@@ -4,8 +4,11 @@
 
 	$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID";
 	$result = mysqli_query($conn, $sql);
+	
+//Ovan bör ligga kvar och $result bör "Returnas"
 
-		while ($row = $result->fetch_assoc())  //Runs through the entire result
+//Vi bör bryta ut nedan till en view
+		while ($row = $result->fetch_assoc())  
 		{
 			$trail_name = $row['trailName'];
 
@@ -22,3 +25,5 @@
 			
 			echo "</div>";
 		}
+
+
