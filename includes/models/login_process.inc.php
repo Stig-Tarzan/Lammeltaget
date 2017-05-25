@@ -24,6 +24,7 @@ if (isset($_POST['username_value']))
 			$sql = "SELECT * FROM user WHERE userName='$user_name' AND password='$db_hash'"; 
 			$result = mysqli_query($conn, $sql);	
 			$_SESSION['user_name'] = $row['userName'];
+			$_SESSION['user_id'] = $row['userID'];
 			echo "true";
 		}
 	}

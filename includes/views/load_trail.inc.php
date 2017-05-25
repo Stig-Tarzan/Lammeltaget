@@ -55,14 +55,11 @@
       path.setMap(map);
 }
       
-      
-
     </script>
     <script async defer
     src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZvUPwL77h619fuPWHSSodVSsgoz51n0&callback=initMap'>
     </script>
-
-
-
             ";
   echo $googlemaps_api;
+  echo "<button id='upvote_trail_button'>Up vote</button>";
+  echo "<button id='downvote_trail_button'>Down vote</button>";
