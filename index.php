@@ -20,7 +20,7 @@ date_default_timezone_set('Europe/Stockholm');
 
             <title>Lämmeltåget</title>
             <div class='banner'>
-                <a href='index.php' id='lammeltaget'><H1>LämmelTåget</H1></a>
+                <a href='index.php'class='banner_obj' id='lammeltaget'><H1>LämmelTåget</H1></a>
                 <div id='user_info'></div>
             </div>
         </head>
@@ -40,6 +40,7 @@ date_default_timezone_set('Europe/Stockholm');
             </div>
             <div id='user_section' >
             </div>
+            <div id='profile_section'></div>
         </body>
     </html>
         

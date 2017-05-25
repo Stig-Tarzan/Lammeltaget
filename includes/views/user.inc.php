@@ -5,7 +5,7 @@ session_start();
 	{
 		echo "
 				<div  id='username_button'></div>
-				<a class='banner_obj' id='log_out_button'>Logga ut ".$_SESSION['user_name']."</a>
+				
 				
 				";	
 	}

@@ -50,6 +50,21 @@ var poly_total;
 
 	});
 
+
+
+	//*************profile info*****************************
+
+	$('.banner').on('click', '#username_button',function () {
+
+		$('#profile_section').css('width', '30%');
+		$('#profile_section').css('display', 'flex');
+		$('#profile_section').css('box-shadow', '0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22)');	
+		
+		
+		$('#profile_section').load('includes/views/profile.inc.php');
+
+	});
+
 	//*************Register*****************************
 	$('#user_section').on('click', '#apply_register_button',function () {
 		var user_name = $('#username_register').val();
@@ -162,7 +177,7 @@ var poly_total;
 $('#filter_container').on('click', '.filter_button',function () {
 
 		var trail_filter = this.id;
-		
+
 
 		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
 	});

@@ -75,15 +75,30 @@ body
 	float: right;
 	padding-right: 10px;
 }
-#user_info a
+#profile_section a
 {
 	margin: auto;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-family: 'Roboto', sans-serif;
 	
-	color: white;
+	color: black;
 	cursor:pointer;
 	margin-right: 20px;
+}
+
+#profile_section
+{
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	width: 10%;
+	right: 0;
+	margin-right: 1%;
+	margin-top: 1%;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	padding-bottom: 20px;
+	padding: 10px;
 }
 #username_button {
 	background-position: 0px 7px;
@@ -99,6 +114,15 @@ body
 	
 
 }
+a#log_out_button.banner_obj:hover {
+	color: gray;
+	border-bottom:3px solid rgba(255, 227, 91,0.5);
+	
+	
+
+}
+
+
 
 
 #main_section
@@ -111,7 +135,7 @@ body
 	margin-top: 1%;
 	background-color: rgb(255,255,255);
 	width: 70%;
-  	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   	min-width: 350px;
 }
 
