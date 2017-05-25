@@ -183,6 +183,7 @@ var poly_total;
 			data
 			, function(data, status) 
 			{});
+    });
 	
 
 	$('#content_top').on('click', '#downvote_trail_button',function () 
@@ -194,7 +195,7 @@ var poly_total;
 				, function(data, status) 
 				{});
 		
-    }
+    });
 
 	//*************filter trail*********************
 $('#filter_container').on('click', '.filter_button',function () {
