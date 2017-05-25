@@ -7,6 +7,7 @@ date_default_timezone_set('Europe/Stockholm');
  <!DOCTYPE html
     <html lang='en'>
         <head>
+            <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Roboto" rel="stylesheet">
             <link rel='stylesheet' type='text/css' href='assets/css/main.css'>
             <script src='https://code.jquery.com/jquery-3.2.1.min.js' 
             integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' 
@@ -17,9 +18,9 @@ date_default_timezone_set('Europe/Stockholm');
     
 
 
-            </a><title>Lämmeltåget</title>
+            <title>Lämmeltåget</title>
             <div class='banner'>
-                <a href='index.php'><H1>Lämmeltåget</H1></a>
+                <a href='index.php' id='lammeltaget'><H1>LämmelTåget</H1></a>
                 <div id='user_info'></div>
             </div>
         </head>
