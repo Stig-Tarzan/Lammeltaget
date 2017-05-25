@@ -26,13 +26,16 @@
         path_array_float[i] = parseFloat(path_array[i]);
       }
 
+      var j = 0;
       for (var i=0; i < path_array_float.length-1; i++) 
       { 
-          path_extended[i]=
-          {lat: path_array_float[i], lng: path_array_float[i+1]}
+          path_extended[j]=
+          {lat: path_array_float[i], lng: path_array_float[i+1]};
+          j++;
+          i++;
       }
-      console.log(path_array_float.toString());
-     
+
+
  
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -40,7 +43,6 @@
           center: {lat: 59.853642, lng: 17.634966},
           mapTypeId: 'terrain'
         });
-      
 
         path = new google.maps.Polyline({
           path: path_extended,
@@ -53,14 +55,11 @@
       path.setMap(map);
 }
       
-      
-
     </script>
     <script async defer
     src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZvUPwL77h619fuPWHSSodVSsgoz51n0&callback=initMap'>
     </script>
-
-
-
             ";
   echo $googlemaps_api;
+  echo "<button id='upvote_trail_button'>Up vote</button>";
+  echo "<button id='downvote_trail_button'>Down vote</button>";
