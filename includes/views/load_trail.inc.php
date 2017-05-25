@@ -25,7 +25,7 @@
       {
         path_array_float[i] = parseFloat(path_array[i]);
       }
-      
+
       var j = 0;
       for (var i=0; i < path_array_float.length-1; i++) 
       { 
@@ -34,8 +34,7 @@
           j++;
           i++;
       }
-      console.log(path_array_float.toString());
-     
+
 
  
       function initMap() {
