@@ -23,7 +23,7 @@ var poly_total;
 	});		
 
 	//*************log out*********************************
-	$('#user_info').on('click', '#log_out_button',function () {
+	$('#profile_section').on('click', '#log_out_button',function () {
 
 		$.post("includes/models/log_out_process.inc.php",{}, function(data, status)
 		{
@@ -34,6 +34,10 @@ var poly_total;
 
 
 	$('#search_container').on('click', '#search_button',function () {
+		$('#content_bot').css('display', 'none');
+		$("#add_trail").css("display", "flex");
+		$('#undo_icon').css("display", "none");
+		$('#save_icon').css("display", "none");
 		
 		$('#filter_container').load('includes/views/filters.inc.php');
 		$('#content_top').load('includes/models/display_trail_list_process.inc.php');
@@ -56,12 +60,28 @@ var poly_total;
 
 	$('.banner').on('click', '#username_button',function () {
 
-		$('#profile_section').css('width', '30%');
+
+		$('#profile_section').css('width', '20%');
 		$('#profile_section').css('display', 'flex');
 		$('#profile_section').css('box-shadow', '0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22)');	
 		
 		
 		$('#profile_section').load('includes/views/profile.inc.php');
+
+	});
+
+
+	//*************profile trails*****************************
+	$('#profile_section').on('click', '#user_trails',function () {
+		$('#content_bot').css('display', 'none');
+		$("#add_trail").css("display", "flex");
+		$('#undo_icon').css("display", "none");
+		$('#save_icon').css("display", "none");
+		
+		$('#profile_section').css('display', 'none');
+		
+		
+		$('#content_top').load('includes/views/my_trails.inc.php');
 
 	});
 
@@ -129,6 +149,10 @@ var poly_total;
     $('#main_section').on('click', '#save_icon',function () 
 
     {
+      $('#content_bot').css('display', 'none');
+      $("#add_trail").css("display", "flex");
+		$('#undo_icon').css("display", "none");
+		$('#save_icon').css("display", "none");
       var trail_name_value = $('#trail_name').val();
       var trail_difficulty_level_value = $('#trail_difficulty').val();
       var trail_creation_date_value = $('#trail_creation_date').val();
@@ -213,13 +237,16 @@ $('#filter_container').on('click', '.filter_button',function () {
 	//***************************************************
 
 	$('#main_section').on('click', '#add_trail',function () 
-	{
+	{	
+
+		
 
 		$('#content_top').load('includes/views/create_trail.inc.php');
 		$('#content_bot').load('includes/views/trail_info.inc.php');
 		$("#add_trail").css("display", "none");
 		$('#undo_icon').css("display", "flex");
 		$('#save_icon').css("display", "flex");
+		$('#content_bot').css('display', 'initial');
 
 	});
 	$('#main_section').on('click', '#undo_icon',function () 

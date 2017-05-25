@@ -20,7 +20,7 @@ session_start();
 
 		echo "
 				<div id='username_welcome'>" .$_SESSION['user_name'] ."<a id='user_steg'>Steg " .$steps ."</a></div>
-				
+				<a id='user_trails'>Mina Leder</a>
 				<a class='banner_obj' id='log_out_button'>Logga ut </a>
 				
 				
