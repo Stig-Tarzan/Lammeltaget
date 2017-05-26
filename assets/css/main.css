@@ -58,6 +58,17 @@ body
 	border-radius: 100px;
 	border: 3px solid #9187a1;
 }
+#comment_icon {
+
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 2%;
+	left: 	90%;
+	display: none;
+	border-radius: 100px;
+	border: 3px solid #9187a1;
+}
 #user_info
 {
 	
@@ -81,6 +92,7 @@ body
 	cursor:pointer;
 	margin-right: 20px;
 }
+
 
 #profile_section
 {
@@ -426,4 +438,39 @@ a#user_steg {
   padding: 0;
   margin:0;
   border: 0;
+}
+
+/* vote icon------------------*/
+.material-icons-arrows{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #9187a1;
+  cursor: pointer;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+
+}
+#vote_container {
+	float: right;
+	
+	width: 20px;
+	padding-right: 20px;
 }
