@@ -34,6 +34,7 @@ var poly_total;
 		else
 		{
 			$("#add_trail").css("display", "flex");
+			$("#add_trail").css('bottom', '2%');
 		}
 	});		
 
@@ -51,8 +52,10 @@ var poly_total;
 	$('#search_container').on('click', '#search_button',function () {
 		$('#content_bot').css('display', 'none');
 		$("#add_trail").css("display", "flex");
+		$("#add_trail").css('bottom', '2%');
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
+		$('#comment_icon').css("display", "none");
 		
 		$('#filter_container').load('includes/views/filters.inc.php');
 		$('#content_top').load('includes/models/display_trail_list_process.inc.php');
@@ -92,6 +95,7 @@ var poly_total;
 	$('#profile_section').on('click', '#user_trails',function () {
 		$('#content_bot').css('display', 'none');
 		$("#add_trail").css("display", "flex");
+		$("#add_trail").css('bottom', '2%');
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
 		
@@ -149,6 +153,7 @@ var poly_total;
 					$("#user_section").css("display", "none");
 					$('#user_info').load('includes/views/user.inc.php');
 					$("#add_trail").css("display", "flex");
+					$("#add_trail").css('bottom', '2%');
 				}
 				else
 				{
@@ -168,6 +173,7 @@ var poly_total;
     {
       $('#content_bot').css('display', 'none');
       $("#add_trail").css("display", "flex");
+      $("#add_trail").css('bottom', '2%');
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
       var trail_name_value = $('#trail_name').val();
@@ -218,7 +224,7 @@ var poly_total;
 	//***************************************************
 
 	//*************Post comment*************************
-	 $('#content_bot').on('click', '#submit_comment',function () 
+	 $('#main_section').on('click', '#comment_icon',function () 
     {
     	var comment_input = $('#comment_input').val();
     	var comment_trail_name = $('#comment_trail_name').val();
@@ -288,7 +294,21 @@ var poly_total;
 	//***************************************************
 
 	//*************filter trail*********************
-$('#filter_container').on('click', '.filter_button',function () {
+$('#filter_container').on('click', '.date_button',function () {
+
+		var trail_filter = this.id;
+
+
+		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
+	});
+$('#filter_container').on('click', '.rate_button',function () {
+
+		var trail_filter = this.id;
+
+
+		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
+	});
+$('#filter_container').on('click', '.alpha_button',function () {
 
 		var trail_filter = this.id;
 
@@ -307,9 +327,12 @@ $('#filter_container').on('click', '.filter_button',function () {
 		$('#content_top').load('includes/views/create_trail.inc.php');
 		$('#content_bot').load('includes/views/trail_info.inc.php');
 		$("#add_trail").css("display", "none");
+		$("#add_trail").css('bottom', '2%');
 		$('#undo_icon').css("display", "flex");
 		$('#save_icon').css("display", "flex");
+		$('#comment_icon').css("display", "none");
 		$('#content_bot').css('display', 'initial');
+
 
 	});
 	$('#main_section').on('click', '#undo_icon',function () 
