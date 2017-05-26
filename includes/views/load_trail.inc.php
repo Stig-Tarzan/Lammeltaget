@@ -64,5 +64,6 @@
 
   echo $googlemaps_api;
   echo "<input type='hidden' id='vote_trail_name' value='$trail_name'></input>";
-  echo "<button id='upvote_trail_button'>Up vote</button>";
-  echo "<button id='downvote_trail_button'>Down vote</button>";
+  echo "<div id=vote_container>";
+  echo "<i id='upvote_trail_button'class='material-icons-arrows'>arrow_upward</i>";
+  echo "<i id='downvote_trail_button' class='material-icons-arrows'>arrow_downward</i></div>";

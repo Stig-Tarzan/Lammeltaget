@@ -40,6 +40,7 @@ date_default_timezone_set('Europe/Stockholm');
                 <div id='content_bot_2'></div>
                 <i id='undo_icon'class="material-icons">undo</i>
                 <i id='save_icon' class="material-icons">save</i>
+                <i id='comment_icon' class="material-icons">comment</i>
 
                 
                 
