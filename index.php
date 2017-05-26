@@ -8,8 +8,8 @@ date_default_timezone_set('Europe/Stockholm');
     <html lang='en'>
         <head>
 
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+   
+           
             <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Roboto" rel="stylesheet">
             <link rel='stylesheet' type='text/css' href='assets/css/main.css'>
             <script src='https://code.jquery.com/jquery-3.2.1.min.js' 
@@ -33,14 +33,14 @@ date_default_timezone_set('Europe/Stockholm');
                 <div id='search_container'></div>
                 <div id='filter_container'></div>
 
-                <i id='add_trail' class="material-icons">add_circle</i>
+                <div id='add_trail'></div>
 
                 <div id='content_top'><p>Välkommen ombord!</p></div>
                 <div id='content_bot'></div>
                 <div id='content_bot_2'></div>
-                <i id='undo_icon'class="material-icons">undo</i>
-                <i id='save_icon' class="material-icons">save</i>
-                <i id='comment_icon' class="material-icons">comment</i>
+                <div id='undo_icon'></div>
+                <div id='save_icon'></div>
+                <div id='comment_icon'></div>
 
                 
                 

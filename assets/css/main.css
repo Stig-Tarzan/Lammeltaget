@@ -35,39 +35,97 @@ body
 
 
 #undo_icon {
+	background-image: url(../img/undo_icon.png);
+	background-size: 70px 70px;
 
 	position: fixed;
 	width: 70px;
 	height: 70px;
 	bottom: 15%;
-	left: 	90%;
+	left: 	92%;
 	display: none;
-	border: 3px solid #9187a1;
-	
 
-	border-radius: 100px
+		filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.25))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.2))
+}
+#undo_icon:hover {
+	background-image: url(../img/undo_icon.png);
+	background-size: 75px 75px;
+
+	position: fixed;
+	width: 75px;
+	height: 75px;
+	bottom: 15%;
+	left: 	91.8%;
+	display: none;
+
+	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 10px rgba(0, 0, 0, 0.12));
 }
 #save_icon {
+	background-image: url(../img/save_icon.png);
+	background-size: 60px 60px;
+
+	position: fixed;
+	width: 65px;
+	height: 65px;
+	bottom: 2%;
+	left: 	92.2%;
+	display: none;
+
+		filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.25))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.2));
+}
+#save_icon:hover {
+	background-image: url(../img/save_icon.png);
+	background-size: 70px 70px;
 
 	position: fixed;
 	width: 70px;
 	height: 70px;
 	bottom: 2%;
-	left: 	90%;
+	left: 	91.8%;
 	display: none;
-	border-radius: 100px;
-	border: 3px solid #9187a1;
+	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 10px rgba(0, 0, 0, 0.12));
+
+
 }
 #comment_icon {
+	background-image: url(../img/comment.png);
+	background-size: 60px 60px;
 
 	position: fixed;
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	bottom: 2%;
-	left: 	90%;
+	left: 	92%;
 	display: none;
-	border-radius: 100px;
-	border: 3px solid #9187a1;
+	filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12));
+
+
+}
+#comment_icon:hover {
+	background-image: url(../img/comment.png);
+	background-size: 60px 60px;
+
+	position: fixed;
+	width: 65px;
+	height: 65px;
+	bottom: 2%;
+	left: 	92%;
+	display: none;
+	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 10px rgba(0, 0, 0, 0.12));
+
+
 }
 #user_info
 {
@@ -227,15 +285,34 @@ a#user_steg {
 
 #add_trail {
 	
+	background-image: url(../img/add_trail.png);
+	background-size: 60px 60px;
 	position: fixed;
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	bottom: 2%;
-	left: 	90%;
-	border: 3px solid #9187a1;
-	
+	left: 	92%;
+	  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12))
+										;
 
-	border-radius: 100px
+}
+#add_trail:hover {
+	background-image: url(../img/add_trail.png);
+	background-size: 60px 60px;
+	background-repeat: no-repeat;
+	position: fixed;
+	width: 65px;
+	height: 65px;
+	bottom: 2%;
+	left: 	92%;
+	display: none;
+	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 10px rgba(0, 0, 0, 0.12));
+
+
 }
 
 
@@ -263,18 +340,65 @@ a#user_steg {
 	width: 30%;
 }
 #filter_container {
-
+	width: 40%;
+	margin-left: 60%;
 	display: inline-block;
 	vertical-align: baseline;
-	padding-right: 10px;
-	border-bottom:2px solid rgb(255, 232, 163);	
+	
+	
+	cursor: pointer;
+	
 
 }
-#filter_container button {
 
+#filter_container a {
+	
 	float: right;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+
 
 }
+.rate_button:hover {
+	color: white;
+	background-color: rgb(255, 173, 43);
+
+}
+.rate_button {
+	background-color: rgb(255, 232, 163);
+	padding-right: 10px;
+	padding-left: 10px;
+		padding-top: 10px;
+	padding-bottom: 10px;
+}
+.alpha_button {
+	background-color: rgb(255, 232, 163);
+	padding-right: 10px;
+		padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.date_button {
+	background-color: rgb(255, 232, 163);
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.alpha_button:hover {
+	color: white;
+	background-color: rgb(255, 173, 43);
+}
+.date_button:hover {
+	color: white;
+	background-color: rgb(255, 173, 43);
+}
+.date_button:hover {
+	color: white;
+	background-color: rgb(255, 173, 43);
+}
+
+
 #trail {
 	padding: 5px;
 }
@@ -310,6 +434,7 @@ a#user_steg {
 	font-size: 2em;
 	font-weight: bold;
 }
+
 #trail_name_in_list{
 	font-weight: bolder;
 	font-family: arial;
@@ -332,7 +457,7 @@ a#user_steg {
 #map {
 	width: 100%;
 	height: 50%;
-	max-width: 900px;
+	
 	
 	min-height: 500px;
 	min-width: 350px;
@@ -413,7 +538,38 @@ a#user_steg {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 70px;  /* Preferred icon size */
+  font-size: 60px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: rgb(255, 202, 104);
+  cursor: pointer;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12))
+										drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.material-icons-comment{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 60px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -434,10 +590,11 @@ a#user_steg {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
-  padding: 0;
-  margin:0;
-  border: 0;
+    filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
+        drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
+        drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12))
+		drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
+
 }
 
 /* vote icon------------------*/
