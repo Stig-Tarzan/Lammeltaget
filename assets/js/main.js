@@ -1,6 +1,4 @@
 var mouse_is_inside = false;
-var voted_up = false;
-var voted_down = false;
 
 $(document).ready(function () {
 
@@ -216,6 +214,8 @@ var poly_total;
         		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data, trail_name: trail_name});
         		$('#content_bot').css('display', 'initial');
         		$('#content_bot_2').css('display', 'initial');
+        		$('#filter_container').css('display', 'none');
+        		
 
         		$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: trail_name});
         		$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: trail_name});
@@ -247,48 +247,27 @@ var poly_total;
 	//*************Rate trail*************************
 	$('#content_top').on('click', '#upvote_trail_button',function () 
     {
-    	if(!voted_up){
 	    	var trail_name = $('#vote_trail_name').val();
 	    	var data = {trail_name_value: trail_name};
 	    	$.post("includes/models/up_vote_trail.inc.php", 
 				data
 				, function(data, status)
 				{
-					alert(data);
+		
 				});
-	    	voted_up = true;
-	    	voted_down = false;
-	    	$('#upvote_trail_button').css("color", "rgba(255, 227, 91,0.5)");
-	    	$('#downvote_trail_button').css("color", "#9187a1");
-	    }
-	    if (voted_up) {
-	    	$('#upvote_trail_button').css("color", "rgb(255, 209, 58)");
-	    }
-
     });
-	if (voted_up) {
-	    	$('#upvote_trail_button').css("color", "rgb(255, 209, 58)");
-	    };
-	if (voted_down) {
-		$('#downvote_trail_button').css("color", "blue");
-	};
 
 	$('#content_top').on('click', '#downvote_trail_button',function () 
     {
-    	if(!voted_down){
+    	
 	    	var trail_name = $('#vote_trail_name').val();
 	    	var data = {trail_name_value: trail_name};
 	    	$.post("includes/models/down_vote_trail.inc.php", 
 				data
 				, function(data, status)
 				{
-					alert(data);
-				});
-	    	voted_down = true;
-	    	voted_up = false;
-	    	$('#downvote_trail_button').css("color", "blue");
-	    	$('#upvote_trail_button').css("color", "#9187a1");
-	    }
+					
+				});	
     });
     
 	//***************************************************

@@ -11,6 +11,12 @@
 	$sql = "SELECT * FROM comment WHERE trailID ='$trail_id'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
+
+	$user_id = $row['userID'];
+
+	$sql_user_name = "SELECT * FROM user WHERE userID='$user_id'";
+	$result_user_name = mysqli_query($conn, $sql_user_name);
+	$row_user_name = mysqli_fetch_assoc($result_user_name);
 	
 //Ovan bör ligga kvar och $result bör "Returnas"
 
@@ -18,7 +24,7 @@
 
 	while ($row = $result->fetch_assoc())  
 	{
-		$commenter = $row['userID'];
+		$commenter = $row_user_name['userName'];
 		$comment_date = $row['date'];
 		$comment_content = $row['content'];
 		echo "<div class='comment_field'>";
