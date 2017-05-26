@@ -5,7 +5,6 @@
 
  -->
 <?php
-  
   $selected_trail = $_POST['selected_trail'];
   $trail_name = $_POST['trail_name'];
   
