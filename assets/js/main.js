@@ -209,6 +209,8 @@ var poly_total;
         		$('#content_top').load('includes/views/load_trail.inc.php', {selected_trail:data, trail_name: trail_name});
         		$('#content_bot').css('display', 'initial');
         		$('#content_bot_2').css('display', 'initial');
+        		$('#filter_container').css('display', 'none');
+        		
 
         		$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: trail_name});
         		$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: trail_name});
