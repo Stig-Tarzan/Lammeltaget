@@ -423,10 +423,17 @@ a#user_steg {
 }
 .trails_in_list {
 	padding-bottom: 3px;
-	border-bottom: 1px rgb(225, 237, 235) solid;
+	border-bottom: 1px rgba(255, 173, 43,0.5) solid;
 	padding-top: 3px;
 	position: relative;
 
+}
+.trails_in_list:hover {
+background-color:rgba(255, 173, 43,0.1);
+
+}
+.trails_in_list label {
+	font-family: 'Roboto', sans-serif;
 }
 .trail_list_rating{
 	float: right;
@@ -445,7 +452,7 @@ a#user_steg {
 	
 	font-size: 1em;
 	
-	left:79%;
+	left:72%;
 	bottom: 0;
 	position: absolute;
 }
@@ -491,11 +498,11 @@ a#user_steg {
 }
 #trail_current_difficulty {
 	width: 10em;
-	margin-right: 70%;
+	margin-left: 40%;
 	font-weight: bolder;
 	border: none;
 	vertical-align: middle;
-	position: relative;
+	position: absolute;
 
 
 }
@@ -504,11 +511,22 @@ a#user_steg {
 	width: 100px;
 	position: relative;
 	vertical-align: middle;
+	padding: 2px;
 
 
 }
+#content_bot label {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+
+}
 #trail_name{
-	margin-right: 90%; 
+	margin-right: 90%;
+	border-top: none;
+	border-left:  2px solid rgba(255, 173, 43,0.6);
+	border-right:none;
+	border-bottom: 2px solid rgba(255, 173, 43,0.6);
+	width: 98%; 
 }
 #trail_info {
 	width: 80%;
@@ -630,4 +648,91 @@ a#user_steg {
 	
 	width: 20px;
 	padding-right: 20px;
+}
+
+/*slider */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 9px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(13, 13, 13, 0.07);
+  background: rgba(255, 173, 43, 0.62);
+  border-radius: 5.6px;
+  border: 0px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 3.8px rgba(0, 0, 0, 0.28), 0px 0px 1px rgba(13, 13, 13, 0.28);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 23px;
+  width: 23px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(255, 183, 69, 0.62);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(13, 13, 13, 0.07);
+  background: rgba(255, 173, 43, 0.62);
+  border-radius: 5.6px;
+  border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 3.8px rgba(0, 0, 0, 0.28), 0px 0px 1px rgba(13, 13, 13, 0.28);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 23px;
+  width: 23px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(255, 163, 18, 0.62);
+  border: 0px solid #010101;
+  border-radius: 11.2px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(13, 13, 13, 0.07);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(255, 173, 43, 0.62);
+  border: 0px solid #010101;
+  border-radius: 11.2px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(13, 13, 13, 0.07);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 3.8px rgba(0, 0, 0, 0.28), 0px 0px 1px rgba(13, 13, 13, 0.28);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 23px;
+  width: 23px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 5px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(255, 173, 43, 0.62);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(255, 183, 69, 0.62);
 }
