@@ -24,7 +24,7 @@
 			$row_rating = mysqli_fetch_assoc($result_rating);
 
 
-			echo "<div id='".$trail_name."' class='trails_in_list'>"; 
+			echo "<div id='".$trail_name."' class='trails_in_list' title='".$row['userName']."'>"; 
 			echo "<img src='assets/img/maps_icon.png' class='trail_img'><div class='trail_content_info'>";
 			echo "<label id='trail_name_in_list'>" . $trail_name . "</label> <br>	";
 			echo "<label class='trail_list_difficulty'>Svårighet:<label>" . $row['difficultyLevel'] . "<br>";

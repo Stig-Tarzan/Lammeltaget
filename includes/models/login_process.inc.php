@@ -25,6 +25,7 @@ if (isset($_POST['username_value']))
 			$result = mysqli_query($conn, $sql);	
 			$_SESSION['user_name'] = $row['userName'];
 			$_SESSION['user_id'] = $row['userID'];
+			$_SESSION['user_id'] = $row['admin'];
 			echo "true";
 		}
 	}
