@@ -298,8 +298,21 @@ $('#filter_container').on('click', '.alpha_button',function () {
 	
 	//***************************************************
 
+    //*************delete trail*********************
+	$('#content_top').on('click', '.delete_trail',function () 
+    {
+    	var trail_name = this.id;
+	    var data = {trail_name: trail_name};
+	    $.post("includes/models/trail_delete.inc.php", 
+			data
+			, function(data, status)
+			{
+				window.location.replace("index.php");
+			});
+    });
+    //***************************************************
 
-	//*************filter trail*********************
+	//*************delete comment*********************
 	$('#content_bot_2').on('click', '.delete_comment',function () 
     {
     	var comment_trail_name = $('#comment_trail_name').val();
@@ -312,6 +325,8 @@ $('#filter_container').on('click', '.alpha_button',function () {
 			});
     });
     //***************************************************
+
+
 
 	$('#main_section').on('click', '#add_trail',function () 
 	{	

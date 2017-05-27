@@ -2,10 +2,10 @@
 	include '../bootstrap.php';
 	session_start();
 
-	if (isset($_POST['comment_id'])) 
+	if (isset($_POST['trail_name'])) 
 	{
-		$comment_id = $_POST['comment_id'];
-		$sql= "DELETE FROM comment WHERE commentID = '$comment_id'";
+		$trail_name = $_POST['trail_name'];
+		$sql= "DELETE FROM trail WHERE trailName = '$trail_name'";
 		$result = mysqli_query($conn, $sql);
 
 		if (!$result) 

@@ -15,6 +15,7 @@ if (isset($_POST['username_value']))
 
 		$new_hash = sha1($password.$user_salt);
 
+
 		if ($new_hash != $db_hash)
 		{
 				
@@ -25,7 +26,7 @@ if (isset($_POST['username_value']))
 			$result = mysqli_query($conn, $sql);	
 			$_SESSION['user_name'] = $row['userName'];
 			$_SESSION['user_id'] = $row['userID'];
-			$_SESSION['user_id'] = $row['admin'];
+			$_SESSION['admin'] = $row['admin'];
 			echo "true";
 		}
 	}
