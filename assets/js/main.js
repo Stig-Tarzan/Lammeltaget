@@ -108,8 +108,16 @@ var poly_total;
 	$('#user_section').on('click', '#apply_register_button',function () {
 		var user_name = $('#username_register').val();
 		var email =$('#email_register').val();
+		var firstname =$('#first_name_register').val();
+		var lastname =$('#last_name_register').val();
+		var DOB =$('#dob_register').val();
+		var adress =$('#address_register').val();
+		var postcode =$('#postcode_register').val();
+		var city =$('#city_register').val();
 		var password =$('#password_register').val();
-		var data = { username_value: user_name, email_value: email, password_value: password }
+
+		var data = { username_value: user_name, email_value: email, password_value: password, first_name: '0', last_name: lastname
+		,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
 		if(user_name == "" || email == ""|| password == "")
 		{
 			alert("Please fill all fields")
@@ -155,6 +163,7 @@ var poly_total;
 				}
 				else
 				{
+					alert(data);
 					$("#user_section input").css("border", "solid 1px red");
 				}
 
