@@ -49,8 +49,8 @@
 			echo "<label class='trail_list_username'>Skapad av: ". $row['userName'] . "<label>";
 			echo "</div>";
 			
-			echo "<label class='trail_list_rating'>" .$row_rating['rating'].  " steg</label>";
-			echo "<label class='trail_list_date'>Skapad: " .$row['creationDate']. "</label>" ;
+			echo "<div id='steg_div'><label class='trail_list_rating'>" .$row_rating['rating'].  "</label></div>";
+			echo "<label class='trail_list_date'>" .$row['creationDate']. "</label>" ;
 			
 			echo "</div>";
 		}

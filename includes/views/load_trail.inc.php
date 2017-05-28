@@ -71,7 +71,6 @@
       path.setMap(map);
 }
 
-$('#add_trail').css('bottom', '15%');
       
     </script>
     <script async defer
