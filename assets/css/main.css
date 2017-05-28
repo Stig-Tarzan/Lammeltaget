@@ -743,10 +743,20 @@ background-color:rgba(255, 173, 43,0.1);
 
 }
 #vote_container {
-	float: right;
-	
+	right: 10px;
+	position: absolute;
 	width: 20px;
-	padding-right: 20px;
+	top: 610px;
+	text-align: center;
+}
+
+#trail_rating
+{
+	width: 25px;
+}
+#trail_rating p
+{
+	width: 25px;
 }
 
 /*slider */
