@@ -352,15 +352,23 @@ a#user_steg {
 
 }
 
+#password_input {
+	margin-bottom: 4px;
+}
 
 
 
 /* styling for search_container and its contents*/
 
+#search_container input{
+	background-color: rgba(0,0,0,0.1);
+	padding: 4px;
+}
+
 #search_container{
 	width: 95%;
 	position: relative;
-	padding: 20px;
+	padding: 22px;
 	padding-left: 10px;
 }
 #search_button {
@@ -371,11 +379,13 @@ a#user_steg {
 
 }
 #search_input {
-
+	border:0;
+	background-color: blue;
 	width: 85%; 
 	margin-top: 15px;
 	margin-bottom: 26px;
 }
+
 #county_input {
 	width: 30%;
 }
