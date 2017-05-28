@@ -69,6 +69,8 @@ var poly_total;
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
 		$('#comment_icon').css("display", "none");
+		$('#content_top2').css("display", "none");
+		$('#filter_container').css('display', 'initial');
 		
 		$('#filter_container').load('includes/views/filters.inc.php');
 
@@ -156,6 +158,8 @@ var poly_total;
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
 		$('#comment_icon').css("display", "none");
+		$('#content_top2').css("display", "none");
+		$('#delete_trail_button').css("display", "none");
 		
 		
 		$('#content_bot_2').hide();
@@ -262,6 +266,7 @@ var poly_total;
 					$('#user_info').load('includes/views/user.inc.php');
 					$("#add_trail").css("display", "flex");
 					$("#add_trail").css('bottom', '2%');
+					window.location.href = 'index.php';
 				}
 				else
 				{
@@ -280,11 +285,13 @@ var poly_total;
     $('#main_section').on('click', '#save_icon',function () 
 
     {
-      $('#content_bot').css('display', 'none');
-      $("#add_trail").css("display", "flex");
-      $("#add_trail").css('bottom', '2%');
+      	$('#content_bot').css('display', 'none');
+      	$("#add_trail").css("display", "flex");
+      	$("#add_trail").css('bottom', '2%');
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
+		document.getElementById("content_top").innerHTML = "";
+
       var trail_name_value = $('#trail_name').val();
       var trail_difficulty_level_value = $('#trail_difficulty').val();
       var trail_creation_date_value = $('#trail_creation_date').val();
@@ -324,18 +331,16 @@ var poly_total;
 			, function(data, status)
      		{
         		$('#content_top').load('includes/views/load_trail.inc.php', {trail_creator: trail_creator, selected_trail: data, trail_name: trail_name});
-
+        		$('#content_top2').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name});
 
         		$('#content_bot').css('display', 'initial');
         		$('#content_bot_2').css('display', 'initial');
         		$('#filter_container').css('display', 'none');
-        		
+        		$('#content_top2').css("display", "initial");
 
 
         		$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: trail_name});
         		$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: trail_name});
-        	
-    			$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name});
       		});
 
     	});
@@ -362,9 +367,9 @@ var poly_total;
     	
     });
 	//*************Rate trail*************************
-	$('#content_top').on('click', '#upvote_trail_button',function () 
+	$('#content_top2').on('click', '#upvote_trail_button',function () 
     {
-    		var trail_creator = $('#vote_trail_creator_name').val()
+    		var trail_creator = $('#vote_trail_creator_name').val();
 	    	var trail_name_value = $('#vote_trail_name').val();
 	    	var data = { trail_name_value: trail_name_value };
 
@@ -375,11 +380,11 @@ var poly_total;
 				data
 				, function(data, status)
 				{
-					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name_value});
+					$('#content_top2').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name_value});
 				});
     });
 
-	$('#content_top').on('click', '#downvote_trail_button',function () 
+	$('#content_top2').on('click', '#downvote_trail_button',function () 
     {
     		var trail_creator = $('#vote_trail_creator_name').val()
 	    	var trail_name_value = $('#vote_trail_name').val();
@@ -392,7 +397,7 @@ var poly_total;
 				data
 				, function(data, status)
 				{
-					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name_value});
+					$('#content_top2').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name_value});
 				});	
     });
     
@@ -468,6 +473,8 @@ $('#filter_container').on('click', '.alpha_button',function () {
 		$('#comment_icon').css("display", "none");
 		$('#content_bot').css('display', 'initial');
 		$('#content_bot_2').css("display", "none");
+		$('#content_top2').css("display", "none");
+		$('#delete_trail_button').css("display", "none");
 
 
 	});

@@ -12,8 +12,16 @@
   $trail_name = $_POST['trail_name'];
   $sql = "SELECT * FROM trail WHERE trailName = '$trail_name'";
   $result = mysqli_query($conn, $sql);
+
+/*  $sql_vote = "SELECT * FROM user,trail join (SELECT trail.trailID, SUM(vote) as 'rating' FROM vote,trail WHERE vote.trailID = trail.trailID group by trail.trailID) rate on trail.trailID = rate.trailID WHERE trail.userID=user.userID AND trail.trailName = '$trail_name'";
+  $result_vote = mysqli_query($conn, $sql_vote);
+  $row_vote = mysqli_fetch_assoc($result_vote);
+  $rating = $row_vote['rating'];*/
+
+
   $row = mysqli_fetch_assoc($result);
   $trail_id = $row['trailID'];
+  $trail_description = $row['trailInfoText'];
 
   
   $googlemaps_api = "
@@ -54,7 +62,7 @@
 
         path = new google.maps.Polyline({
           path: path_extended,
-          geodesic: true,
+          geodesic: false,
           strokeColor: '#FF0000',
           strokeOpacity: 1.0,
           strokeWeight: 2
@@ -104,7 +112,11 @@ $('#add_trail').css('bottom', '15%');
       echo "<style>#upvote_trail_button{color: rgb(166, 166, 166)} ";
     }
 }
+  echo "<input type='hidden' id='vote_trail_creator_name' value='$trail_creator'></input>"; 
 
+  echo "<label id='trail_name_in_display' value='$trail_name'><p>$trail_name</p></label>";
+  echo "<label id='trail_creator_name_in_display' value='$trail_creator'><p>Skapad av: $trail_creator</p></label>"; 
+  echo "<text id='vote_trail_name' value='$trail_name'><p>Beskrivning: $trail_description</p></text>";
   
    
 
