@@ -463,7 +463,7 @@ $('#filter_container').on('click', '.alpha_button',function () {
 	{	
 
 		
-
+		$('#filter_container').css('display', 'none');
 		$('#content_top').load('includes/views/create_trail.inc.php');
 		$('#content_bot').load('includes/views/trail_info.inc.php');
 		$("#add_trail").css("display", "none");

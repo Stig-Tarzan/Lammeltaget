@@ -16,7 +16,7 @@
 								<input name='password_value' id='password_register' type='password' placeholder='Välj lösenord'>
 								<input name='reenter_password_value' id='reenter_password_register' type='password' placeholder='Upprepa lösenord'>
 								<input name='have_read' id='user_agree' type='checkbox' ><label id='agree_terms'>Jag har läst och förstår <label id='load_terms'>användarvilkoren</label></label>
-								<div id='terms_of_agree'></div>
+								<div id='terms_of_agree'><h2 id='fill_text'>Häng med på friluftsäventyr<br> med oss i<br> Lämmeltåget!</h2></div>
 								<button id='apply_register_button' class='button'> Registrera </button>
 							";
 
