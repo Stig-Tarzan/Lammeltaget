@@ -73,7 +73,7 @@ $('#add_trail').css('bottom', '15%');
   echo $trail_creator;
   echo $_SESSION['admin'];
 
-    if($trail_creator == $_SESSION['user_name'] || $_SESSION['admin'] = 1)
+    if($trail_creator == $_SESSION['user_name'] OR $_SESSION['admin'] == 1)
     {
       echo "<button id='".$trail_name."' class='delete_trail'>Delete trail</button>";
     }
