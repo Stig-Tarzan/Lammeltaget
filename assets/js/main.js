@@ -347,7 +347,7 @@ var poly_total;
 	//***************************************************
 
 	//*************Post comment*************************
-	 $('#main_section').on('click', '#comment_icon',function () 
+	 $('#main_section').on('click', '#comment_publish',function () 
     {
     	var comment_input = $('#comment_input').val();
     	var comment_trail_name = $('#comment_trail_name').val();
