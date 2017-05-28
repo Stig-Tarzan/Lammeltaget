@@ -2,8 +2,7 @@
   session_start(); 
   include '../bootstrap.php';
   $trail_creator = $_POST['trail_creator'];
-  $selected_trail = $_POST['selected_trail'];
-  $trail_name = $_POST['trail_name'];
+  $trail_name = $_POST['trail_name_value'];
   $sql = "SELECT * FROM trail WHERE trailName = '$trail_name'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);
@@ -23,15 +22,19 @@
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
+    echo "<style>#upvote_trail_button{color: rgb(166, 166, 166)} </style>";
+    echo "<style>#downvote_trail_button{color: rgb(166, 166, 166)} </style>";
+      
+
     if ($row['vote'] == 1) 
     {
-      echo "<style>#upvote_trail_button{color: rgb(255, 173, 43);} 
-      #downvote_trail_button{color: #9187a1;} </style> ";
+      echo "<style>#upvote_trail_button{color: rgb(255, 173, 43)} </style> ";
+      echo "<style>#downvote_trail_button{color: rgb(166, 166, 166)} </style>";
     }
-    else if($row['vote'] == -1)
+    if($row['vote'] == -1)
     {
-      echo "<style>#downvote_trail_button{color: rgb(153, 187, 255);} 
-      #upvote_trail_button{color: #9187a1;} </style> ";
+      echo "<style>#downvote_trail_button{color: rgb(153, 187, 255)} </style> ";
+      echo "<style>#upvote_trail_button{color: rgb(166, 166, 166)} </style>";
     }
 }
 

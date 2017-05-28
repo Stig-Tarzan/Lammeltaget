@@ -272,14 +272,20 @@ var poly_total;
 			, function(data, status)
      		{
         		$('#content_top').load('includes/views/load_trail.inc.php', {trail_creator: trail_creator, selected_trail: data, trail_name: trail_name});
+
+
         		$('#content_bot').css('display', 'initial');
         		$('#content_bot_2').css('display', 'initial');
         		$('#filter_container').css('display', 'none');
         		
 
+
         		$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: trail_name});
         		$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: trail_name});
+        	
+    			$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name});
       		});
+
     	});
 	//***************************************************
 
@@ -307,26 +313,34 @@ var poly_total;
 	$('#content_top').on('click', '#upvote_trail_button',function () 
     {
     		var trail_creator = $('#vote_trail_creator_name').val()
-	    	var trail_name = $('#vote_trail_name').val();
-	    	var data = {trail_name_value: trail_name};
+	    	var trail_name_value = $('#vote_trail_name').val();
+	    	var data = { trail_name_value: trail_name_value };
+
+	    	$('#upvote_trail_button').css("color", "rgb(166, 166, 166)"); 
+        	$('#downvote_trail_button').css("color", "rgb(166, 166, 166)"); 
+
 	    	$.post("includes/models/up_vote_trail.inc.php", 
 				data
 				, function(data, status)
 				{
-					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, selected_trail: data, trail_name: trail_name});
+					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name_value});
 				});
     });
 
 	$('#content_top').on('click', '#downvote_trail_button',function () 
     {
     		var trail_creator = $('#vote_trail_creator_name').val()
-	    	var trail_name = $('#vote_trail_name').val();
-	    	var data = {trail_name_value: trail_name};
+	    	var trail_name_value = $('#vote_trail_name').val();
+	    	var data = { trail_name_value: trail_name_value };
+
+	    	$('#upvote_trail_button').css("color", "rgb(166, 166, 166)"); 
+        	$('#downvote_trail_button').css("color", "rgb(166, 166, 166)"); 
+
 	    	$.post("includes/models/down_vote_trail.inc.php", 
 				data
 				, function(data, status)
 				{
-					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, selected_trail: data, trail_name: trail_name});
+					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, trail_name_value: trail_name_value});
 				});	
     });
     

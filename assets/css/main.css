@@ -707,7 +707,7 @@ background-color:rgba(255, 173, 43,0.1);
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  color: #9187a1;
+  color: rgb(166, 166, 166);
   cursor: pointer;
 
   /* Support for all WebKit browsers. */
