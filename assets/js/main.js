@@ -71,7 +71,7 @@ var poly_total;
 		$('#filter_container').load('includes/views/filters.inc.php');
 
 		var input = $('#search_input').val();
-		alert(input);
+	
 
 		$('#content_top').load('includes/models/display_trail_list_process.inc.php', { search_input: input });
 
@@ -335,23 +335,23 @@ var poly_total;
 $('#filter_container').on('click', '.date_button',function () {
 
 		var trail_filter = this.id;
+		var input = $('#search_input').val();
 
-
-		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
+		$('#content_top').load('includes/models/filter_process.inc.php',{ filter: trail_filter, search_input: input} );
 	});
 $('#filter_container').on('click', '.rate_button',function () {
 
 		var trail_filter = this.id;
+		var input = $('#search_input').val();
 
-
-		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
+		$('#content_top').load('includes/models/filter_process.inc.php',{ filter: trail_filter, search_input: input} );
 	});
 $('#filter_container').on('click', '.alpha_button',function () {
 
 		var trail_filter = this.id;
+		var input = $('#search_input').val();
 
-
-		$('#content_top').load('includes/models/filter_process.inc.php',{filter:trail_filter} );
+		$('#content_top').load('includes/models/filter_process.inc.php',{ filter: trail_filter, search_input: input} );
 	});
 
 	
@@ -400,6 +400,7 @@ $('#filter_container').on('click', '.alpha_button',function () {
 		$('#save_icon').css("display", "flex");
 		$('#comment_icon').css("display", "none");
 		$('#content_bot').css('display', 'initial');
+		$('#content_bot_2').css("display", "none");
 
 
 	});

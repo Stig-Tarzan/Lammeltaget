@@ -33,9 +33,14 @@
 		echo "<div class='commenter'>".$commenter."</div>"; 
 		echo "<div class='comment_date'>".$comment_date."</div>"; 
 		echo "<div class='comment_content'>".$comment_content."</div>"; 
-		if ($row['userID'] == $_SESSION['user_id'] OR $_SESSION['admin'] == 1)
-		{
-			echo "<button id='".$row['commentID']."' class='delete_comment'>Delete comment</button>";
+		  
+
+		if (isset($_SESSION['user_name'])) 
+  		{
+			if ($row['userID'] == $_SESSION['user_id'] OR $_SESSION['admin'] == 1)
+			{
+				echo "<button id='".$row['commentID']."' class='delete_comment'>Delete comment</button>";
+			}
+			echo "</div>";
 		}
-		echo "</div>";
 	}

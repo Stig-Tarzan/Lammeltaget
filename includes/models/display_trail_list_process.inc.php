@@ -4,8 +4,6 @@
 
 
 	$search_input = $_POST['search_input'];
-	echo $search_input;
-
 	$search_input_exploded = explode(" ", $search_input);
 
 	if (!empty($search_input)) 
@@ -18,7 +16,6 @@
 	}
 	else
 	{
-		echo "Tomt fält";
 		$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID";
 		$result = mysqli_query($conn, $sql);
 	}

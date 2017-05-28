@@ -71,9 +71,13 @@ $('#add_trail').css('bottom', '15%');
   echo "<i id='upvote_trail_button'class='material-icons-arrows'>arrow_upward</i>";
   echo "<i id='downvote_trail_button' class='material-icons-arrows'>arrow_downward</i></div>";
 
+  if (isset($_SESSION['user_name'])) 
+  {
     if($trail_creator == $_SESSION['user_name'] OR $_SESSION['admin'] == 1)
     {
-      echo "<button id='".$trail_name."' class='delete_trail'>Delete trail</button>";
+      echo "<button id='".$trail_name."' class='delete_trail button'>Radera</button>";
     }
+  }  
+   
 
  

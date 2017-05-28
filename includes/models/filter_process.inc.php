@@ -2,16 +2,31 @@
 	include '../bootstrap.php';
 	session_start();
 	$filter = $_POST['filter'];
-	if ($filter=='trailName'){
+	$search_input = $_POST['search_input'];
+	$search_input_exploded = explode(" ", $search_input);
+
+	if ($filter=='trailName')
+	{
 		$order = 'ASC';
 	}
-	else {
+	else 
+	{
 		$order = 'DESC';
 	}
 
-
-	$sql = "SELECT * FROM user,trail join (SELECT trail.trailID, SUM(vote) as 'rating' FROM vote,trail WHERE vote.trailID = trail.trailID group by trail.trailID) rate on trail.trailID = rate.trailID WHERE trail.userID=user.userID ORDER BY $filter $order";
-	$result = mysqli_query($conn, $sql);
+	if (!empty($search_input)) 
+	{
+		for ($i=0; $i < count($search_input_exploded); $i++) 
+		{ 
+			$sql = "SELECT * FROM user,trail join (SELECT trail.trailID, SUM(vote) as 'rating' FROM vote,trail WHERE vote.trailID = trail.trailID group by trail.trailID) rate on trail.trailID = rate.trailID WHERE trail.userID=user.userID AND trailName LIKE '%$search_input_exploded[$i]%' ORDER BY $filter $order";
+			$result = mysqli_query($conn, $sql);
+		}
+	}
+	else
+	{
+		$sql = "SELECT * FROM user,trail join (SELECT trail.trailID, SUM(vote) as 'rating' FROM vote,trail WHERE vote.trailID = trail.trailID group by trail.trailID) rate on trail.trailID = rate.trailID WHERE trail.userID=user.userID ORDER BY $filter $order";
+		$result = mysqli_query($conn, $sql);
+	}
 
 		while ($row = $result->fetch_assoc())  //Runs through the entire result
 		{
