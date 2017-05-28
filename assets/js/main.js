@@ -1,4 +1,5 @@
 var mouse_is_inside = false;
+var mouse_is_inside_user = false;
 
 $(document).ready(function () {
 
@@ -10,6 +11,17 @@ $(document).ready(function () {
 
     $("body").mouseup(function(){ 
         if(! mouse_is_inside) $('#profile_section').hide();
+    });
+
+    $('#user_section').hover(function(){ 
+        mouse_is_inside_user=true; 
+    }, function(){ 
+        mouse_is_inside_user=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside_user) $('#user_section').load('includes/views/login.inc.php');
+        $('#user_section').css('width','10%');
     });
 
 
@@ -64,11 +76,38 @@ var poly_total;
 
 	$('#user_section').on('click', '#register_button',function () {
 
-		$('#user_section').css('width', '30%');
+		$('#user_section').css('width', '50%');
 		$('#user_section').css('box-shadow', '0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22)');	
 		
 		
 		$('#user_section').load('includes/views/register.inc.php');
+
+	});
+
+	//*************show/hide login*****************************
+
+	$('#user_section').on('click', '#hide_btn',function () {
+
+		
+		
+		$('#user_section').load('includes/views/show_login.inc.php');
+		$('#user_section').css('min-width', '30px');
+		$('#user_section').css('width', '30px');
+		$('#user_section').css('padding', '4px');
+		$('#user_section').css('border-radius', '4px');
+
+
+	});
+
+	$('#user_section').on('click', '#show_btn',function () {
+
+		$('#user_section').css('width', '10%');
+		
+		$('#user_section').load('includes/views/login.inc.php');
+		$('#user_section').css('min-width', '95px');
+		$('#user_section').css('width', '10%');
+				$('#user_section').css('padding', '10px');
+		$('#user_section').css('border-radius', '0');
 
 	});
 

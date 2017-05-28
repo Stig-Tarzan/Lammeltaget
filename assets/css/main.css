@@ -264,6 +264,25 @@ a#user_steg {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	padding-bottom: 20px;
 	padding: 10px;
+	min-width: 95px;
+}
+#hide_btn {
+	position: absolute;
+	color: gray;
+	font-size: 0.8em;
+	margin-left: 70%;
+	top: 80%;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+}
+#show_btn {
+	
+	color: gray;
+	font-size: 0.8em;
+	
+	margin: auto;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #user_section p
@@ -279,7 +298,25 @@ a#user_steg {
 }
 
 .button {
-	width: 100px;
+	  display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 20px;
+      line-height: 15px;
+      border-radius: 2px;
+      font-size: 0.9em;
+      background-color: #fff;
+      color: #646464;
+      font-family: 'Roboto', sans-serif;
+            transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      background-color:rgb(244, 200, 66);
+      border: 0;
+      color: white;
+}
+.button:hover {
+	background-color:rgba(244, 200, 66,0.8);
 }
 
 
@@ -330,11 +367,14 @@ a#user_steg {
 	
 	float: right;
 	right: 0;
+	margin-top: 15px;
 
 }
 #search_input {
 
-	width: 50%; 
+	width: 85%; 
+	margin-top: 15px;
+	margin-bottom: 26px;
 }
 #county_input {
 	width: 30%;
