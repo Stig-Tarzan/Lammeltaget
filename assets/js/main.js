@@ -306,26 +306,27 @@ var poly_total;
 	//*************Rate trail*************************
 	$('#content_top').on('click', '#upvote_trail_button',function () 
     {
+    		var trail_creator = $('#vote_trail_creator_name').val()
 	    	var trail_name = $('#vote_trail_name').val();
 	    	var data = {trail_name_value: trail_name};
 	    	$.post("includes/models/up_vote_trail.inc.php", 
 				data
 				, function(data, status)
 				{
-		
+					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, selected_trail: data, trail_name: trail_name});
 				});
     });
 
 	$('#content_top').on('click', '#downvote_trail_button',function () 
     {
-    	
+    		var trail_creator = $('#vote_trail_creator_name').val()
 	    	var trail_name = $('#vote_trail_name').val();
 	    	var data = {trail_name_value: trail_name};
 	    	$.post("includes/models/down_vote_trail.inc.php", 
 				data
 				, function(data, status)
 				{
-					
+					$('#vote_container').load('includes/views/vote_status.inc.php', {trail_creator: trail_creator, selected_trail: data, trail_name: trail_name});
 				});	
     });
     

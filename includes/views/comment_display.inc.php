@@ -39,7 +39,7 @@
   		{
 			if ($row['userID'] == $_SESSION['user_id'] OR $_SESSION['admin'] == 1)
 			{
-				echo "<button id='".$row['commentID']."' class='delete_comment'>Delete comment</button>";
+				echo "<button id='".$row['commentID']."' class='delete_comment button'>Radera</button>";
 			}
 			echo "</div>";
 		}
