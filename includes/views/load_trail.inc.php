@@ -70,8 +70,7 @@
 
       path.setMap(map);
 }
-$('#comment_icon').css('display', 'flex');
-$('#add_trail').css('bottom', '15%');
+
       
     </script>
     <script async defer
