@@ -105,7 +105,7 @@ var poly_total;
 		$('#user_section').css('min-width', '30px');
 		$('#user_section').css('width', '30px');
 		$('#user_section').css('padding', '4px');
-		$('#user_section').css('border-radius', '4px');
+		$('#user_section').css('border-radius', '4userpx');
 
 
 	});
@@ -146,9 +146,11 @@ var poly_total;
 		$("#add_trail").css('bottom', '2%');
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
+		$('#comment_icon').css("display", "none");
 		
 		
-		
+		$('#content_bot_2').hide();
+
 		
 		$('#content_top').load('includes/views/my_trails.inc.php');
 

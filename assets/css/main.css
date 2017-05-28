@@ -15,7 +15,7 @@ body
 	background-position: 0px -4px;
 	height: 50px;
 	background-color: rgb(255, 232, 163);
-	
+	min-width: 413px;
   	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
@@ -177,7 +177,15 @@ body
 	padding: 4px;
 	margin: -4px;
 	cursor:pointer;
+
 	
+
+}
+#username_input {
+		border-top: none;
+	border-left:  2px solid rgba(255, 173, 43,0.6);
+	border-right:none;
+	border-bottom: 2px solid rgba(255, 173, 43,0.6);
 
 }
 a#log_out_button.banner_obj:hover {
@@ -257,6 +265,7 @@ a#user_steg {
 	flex-direction: column;
 	position: absolute;
 	width: 10%;
+
 	right: 0;
 	margin-right: 2.5%;
 	margin-top: 1%;
@@ -328,7 +337,7 @@ a#user_steg {
 	width: 60px;
 	height: 60px;
 	bottom: 2%;
-	left: 	92%;
+	right: 2px;
 	  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
           drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12))
@@ -343,7 +352,7 @@ a#user_steg {
 	width: 65px;
 	height: 65px;
 	bottom: 2%;
-	left: 	92%;
+	right: 	2px;
 	display: none;
 	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
@@ -354,6 +363,10 @@ a#user_steg {
 
 #password_input {
 	margin-bottom: 4px;
+		border-top: none;
+	border-left:  2px solid rgba(255, 173, 43,0.6);
+	border-right:none;
+	border-bottom: 2px solid rgba(255, 173, 43,0.6);
 }
 
 
@@ -373,9 +386,12 @@ a#user_steg {
 }
 #search_button {
 	
-	float: right;
-	right: 0;
+	position: absolute;
+	margin-left: 4%;
 	margin-top: 15px;
+	max-width: 80px;
+	width: 10%;
+	min-width:3em;
 
 }
 #search_input {
@@ -390,8 +406,8 @@ a#user_steg {
 	width: 30%;
 }
 #filter_container {
-	width: 40%;
-	margin-left: 60%;
+	width: 100%;
+	
 	display: inline-block;
 	vertical-align: baseline;
 	
@@ -476,6 +492,8 @@ a#user_steg {
 	border-bottom: 1px rgba(255, 173, 43,0.5) solid;
 	padding-top: 3px;
 	position: relative;
+	padding-left: 2px;
+	padding-right: 2px;
 
 }
 .trails_in_list:hover {
@@ -502,10 +520,11 @@ background-color:rgba(255, 173, 43,0.1);
 	
 	font-size: 1em;
 	
-	left:72%;
+	left:81.5%;
 	bottom: 0;
 	position: absolute;
 }
+
 
 /* styling for trails/maps and its contents*/
 
@@ -546,7 +565,8 @@ background-color:rgba(255, 173, 43,0.1);
 	bottom: 7px;
 }
 .delete_comment {
-	margin-left:85.2%;	 
+	float:right;
+	margin-bottom: 4px; 
 }
 /* styling for trails/maps and its contents info_content/bottom*/
 
@@ -576,7 +596,7 @@ background-color:rgba(255, 173, 43,0.1);
 }
 #trail_current_difficulty {
 	width: 5em;
-	margin-left: 47%;
+	right: 2px;
 	font-weight: bolder;
 	border: none;
 	vertical-align: middle;
