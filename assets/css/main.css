@@ -610,7 +610,7 @@ background-color:rgba(255, 173, 43,0.1);
 .trail_list_date {
 	
 	font-size: 1em;
-	
+	text-align: right;
 	right:4px;
 	bottom: 0;
 	position: absolute;
