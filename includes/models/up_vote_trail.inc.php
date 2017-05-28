@@ -20,12 +20,14 @@
 		$result = mysqli_query($conn, $sql_exists);	
 		if(!mysqli_num_rows($result) > 0)
 		{
+			echo $trail_name_value;
 			$sql="INSERT INTO vote (userID, trailID, vote)
 				VALUES ('$user_id', '$trail_id', '1')";
 			$result = mysqli_query($conn, $sql);
 		}
 		else
 		{
+			echo $trail_name_value;	
 			$sql = "UPDATE vote SET vote = 1 WHERE userID = '$user_id' AND trailID = '$trail_id'";
 			$result = mysqli_query($conn, $sql);
 		}	
