@@ -42,12 +42,13 @@ body
 	width: 70px;
 	height: 70px;
 	bottom: 15%;
-	left: 	92%;
+	right: 40px;
 	display: none;
 
-		filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2))
-          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.25))
-          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.2))
+		
+		filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.15));
 }
 #undo_icon:hover {
 	background-image: url(../img/undo_icon.png);
@@ -57,7 +58,7 @@ body
 	width: 75px;
 	height: 75px;
 	bottom: 15%;
-	left: 	91.8%;
+	right: 40px;
 	display: none;
 
 	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
@@ -72,12 +73,12 @@ body
 	width: 65px;
 	height: 65px;
 	bottom: 2%;
-	left: 	92.2%;
+	right: 40px;
 	display: none;
 
-		filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2))
-          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.25))
-          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.2));
+		filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 1px 8px rgba(0, 0, 0, 0.15));
 }
 #save_icon:hover {
 	background-image: url(../img/save_icon.png);
@@ -87,7 +88,7 @@ body
 	width: 70px;
 	height: 70px;
 	bottom: 2%;
-	left: 	91.8%;
+	right: 40px;
 	display: none;
 	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
@@ -103,7 +104,7 @@ body
 	width: 60px;
 	height: 60px;
 	bottom: 2%;
-	left: 	92%;
+	right: 40px;
 	display: none;
 	filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
@@ -119,7 +120,7 @@ body
 	width: 65px;
 	height: 65px;
 	bottom: 2%;
-	left: 	92%;
+	right: 40px;
 	display: none;
 	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
@@ -181,7 +182,10 @@ body
 	
 
 }
+
 #username_input {
+	width: 85%;
+	min-width: 95px;
 		border-top: none;
 	border-left:  2px solid rgba(255, 173, 43,0.6);
 	border-right:none;
@@ -247,17 +251,86 @@ a#user_steg {
   	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   	min-width: 350px;
 }
+#user_section input
+{
+border-top: none;
+	border-left:  2px solid rgba(255, 173, 43,0.6);
+	border-right:none;
+	border-bottom: 2px solid rgba(255, 173, 43,0.6);
+	width: 50%;
+}
+#load_terms {
+	font-family:  'Roboto', sans-serif;
+	color: blue;
+	cursor: pointer;
+}
+#agree_terms {
+	width: 40%;
+	font-family:  'Roboto', sans-serif;
+	margin: 0px;
+	
+}
+#terms_of_agree{
+	position: absolute;
+	right: 4px;
+	width: 45%;
+	height: 300px;
+	border-top: none;
+	border-left:  2px solid rgba(255, 173, 43,0.6);
+	border-right:none;
+	border-bottom: 2px solid rgba(255, 173, 43,0.6);
+	overflow: auto;
+	padding-left:2px; 
+
+}
+#terms_of_agree h1{
+	font-size: 1.2em;
+	margin: 0px;
+	font-family: arial;
+}
+#terms_of_agree a{
+	font-size: 1.2em;
+	margin: 0px;
+	font-weight: bold;
+}
+
+
+#first_name_register {
+	margin-top: 8px;
+}
+#dob_register {
+	margin-bottom: 8px;
+}
+
+#register_label {
+	font-family:  'Roboto', sans-serif;
+	font-weight: bolder;
+	font-size: 1.3em;
+}
+
+#city_register {
+	margin-bottom: 8px;
+}
+#reenter_password_register {
+	margin-bottom: 8px;
+}
+
+input#user_agree {
+	width: 1em;
+
+}
 
 #main_section p
 {
 	overflow-wrap: break-word;
 	margin: 0;
 	font-weight: 100;
-	font-family: 'Open Sans', sans-serif;
+	font-family:  'Roboto', sans-serif;
 	font-size: 1em;
 	line-height: 1em;
 	color: #282828;
 }
+
 
 #user_section
 {
@@ -337,7 +410,7 @@ a#user_steg {
 	width: 60px;
 	height: 60px;
 	bottom: 2%;
-	right: 2px;
+	right: 40px;
 	  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14))
           drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12))
@@ -352,7 +425,7 @@ a#user_steg {
 	width: 65px;
 	height: 65px;
 	bottom: 2%;
-	right: 	2px;
+	right: 40px;
 	display: none;
 	filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12))
           drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14))
@@ -362,6 +435,8 @@ a#user_steg {
 }
 
 #password_input {
+	width: 85%;
+	min-width: 95px;
 	margin-bottom: 4px;
 		border-top: none;
 	border-left:  2px solid rgba(255, 173, 43,0.6);
@@ -619,7 +694,7 @@ background-color:rgba(255, 173, 43,0.1);
 
 }
 #trail_name{
-	margin-right: 90%;
+	
 	border-top: none;
 	border-left:  2px solid rgba(255, 173, 43,0.6);
 	border-right:none;

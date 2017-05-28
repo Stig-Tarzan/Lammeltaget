@@ -1,5 +1,7 @@
 var mouse_is_inside = false;
 var mouse_is_inside_user = false;
+var register_has_loaded = false;
+var agree = false;
 
 $(document).ready(function () {
 
@@ -20,8 +22,8 @@ $(document).ready(function () {
     });
 
     $("body").mouseup(function(){ 
-        if(! mouse_is_inside_user) $('#user_section').load('includes/views/login.inc.php');
-        $('#user_section').css('width','10%');
+        if(! mouse_is_inside_user) {$('#user_section').load('includes/views/login.inc.php');
+        $('#user_section').css('width','10%'); };
     });
 
 
@@ -89,9 +91,14 @@ var poly_total;
 		$('#user_section').css('width', '50%');
 		$('#user_section').css('box-shadow', '0 14px 28px rgba(0,0,0,0.25) 0 10px 10px rgba(0,0,0,0.22)');	
 		
-		
+		register_has_loaded = true;
 		$('#user_section').load('includes/views/register.inc.php');
 
+	});
+
+	$('#user_section').on('click', '#load_terms',function () {
+
+		$('#terms_of_agree').load('includes/views/terms.inc.php');
 	});
 	//***************************************************
 
@@ -102,10 +109,11 @@ var poly_total;
 		
 		
 		$('#user_section').load('includes/views/show_login.inc.php');
-		$('#user_section').css('min-width', '30px');
-		$('#user_section').css('width', '30px');
-		$('#user_section').css('padding', '4px');
-		$('#user_section').css('border-radius', '4userpx');
+		$('#user_section').css('min-width', '70px');
+		$('#user_section').css('width', '70px');
+		$('#user_section').css('padding', '1px');
+		$('#user_section').css('height', '1.1em');
+		$('#user_section').css('right', '12%');
 
 
 	});
@@ -117,9 +125,10 @@ var poly_total;
 		$('#user_section').load('includes/views/login.inc.php');
 		$('#user_section').css('min-width', '95px');
 		$('#user_section').css('width', '10%');
+		$('#user_section').css('height', 'initial');
 				$('#user_section').css('padding', '10px');
 		$('#user_section').css('border-radius', '0');
-
+		$('#user_section').css('right', '0');
 	});
 
 
@@ -157,34 +166,75 @@ var poly_total;
 	});
 
 	//*************Register*****************************
-	$('#user_section').on('click', '#apply_register_button',function () {
-		var user_name = $('#username_register').val();
-		var email =$('#email_register').val();
-		var firstname =$('#first_name_register').val();
-		var lastname =$('#last_name_register').val();
-		var DOB =$('#dob_register').val();
-		var adress =$('#address_register').val();
-		var postcode =$('#postcode_register').val();
-		var city =$('#city_register').val();
-		var password =$('#password_register').val();
+	$('#user_section').on('click', '#user_agree',function () {
+		agree = true;
 
-		var data = { username_value: user_name, email_value: email, password_value: password, first_name: '0', last_name: lastname
-		,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
-		if(user_name == "" || email == ""|| password == "")
-		{
-			alert("Please fill all fields")
+	});
+
+
+	$('#user_section').on('click', '#apply_register_button',function () {
+		var user_name = $('#username_register').val().trim();
+		var email =$('#email_register').val().trim();
+		var firstname =$('#first_name_register').val().trim();
+		var lastname =$('#last_name_register').val().trim();
+		var DOB =$('#dob_register').val().trim();
+		var adress =$('#address_register').val().trim();
+		var postcode =$('#postcode_register').val().trim();
+		var city =$('#city_register').val().trim();
+		var password =$('#password_register').val().trim();
+		
+
+		if(agree){
+			
+			
+			if (!validateemail(email)) {
+				$('#email_register').css('border', 'red 2px solid');
+			}
+			else {
+				$('#email_register').css('border', 'initial');
+			
+				if(hasSpaces(user_name))
+				{
+					$('#username_register').css('border', 'initial');
+
+					if(postcode.length == 5)
+					{$('#postcode_register').css('border', 'initial');
+
+						var data = { username_value: user_name, email_value: email, password_value: password, first_name: '0', last_name: lastname
+						,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
+						if(user_name == "" || email == ""|| password == ""|| 
+							firstname == ""|| lastname == ""|| DOB == ""
+							|| adress == ""|| postcode == ""|| city == "")
+						{
+							alert("Please fill all fields")
+						}
+						else
+						{
+							$.post("includes/models/register_process.inc.php", 
+								data
+							, function(data, status)
+							{
+								alert(data);
+								alert(status);
+								$('#user_section').load('includes/views/login.inc.php');
+								$('#user_section').css('width', '10%');
+								agree = false;
+							});		
+						}
+					}
+					else{
+						$('#postcode_register').css('border', 'red 2px solid');
+					}
+				}
+				else {
+				$('#username_register').css('border', 'red 2px solid');
+
+				}
+			}
+
 		}
-		else
-		{
-			$.post("includes/models/register_process.inc.php", 
-				data
-			, function(data, status)
-			{
-				alert(data);
-				alert(status);
-				$('#user_section').load('includes/views/login.inc.php');
-				$('#user_section').css('width', '10%');
-			});		
+		else {
+			$('#agree_terms').css('color', 'red');
 		}
 	});	
 	//***************************************************
@@ -475,3 +525,22 @@ function updateLenghtInput(val) {
 	document.getElementById('trail_length').value=val; 
 }
 
+function validateemail (email) {
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return pattern.test(email);
+}
+function hasSpaces(input) 
+{
+    var space = " ";
+
+    
+    if (input.indexOf(space) >= 0) {
+        
+        return false;
+    }
+    else {
+    	return true;
+    }
+
+    
+}

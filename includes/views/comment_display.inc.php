@@ -45,4 +45,7 @@
 			}
 			echo "</div>";
 		}
+		else {
+			echo "</div>";
+		}
 	}
