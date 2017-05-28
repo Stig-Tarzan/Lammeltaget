@@ -153,6 +153,15 @@ body
 }
 
 
+#trail_information
+{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+	margin: 5px;
+}
+
+
 #profile_section
 {
 	display: none;
@@ -580,8 +589,8 @@ background-color:rgba(255, 173, 43,0.1);
 }
 .trail_list_rating{
 	float: right;
-	font-family: arial;
-	font-size: 2em;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
 	font-weight: bold;
 }
 
