@@ -14,6 +14,7 @@
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);
   $trail_id = $row['trailID'];
+
   
   $googlemaps_api = "
             <div id='map'></div>
@@ -93,12 +94,12 @@ $('#add_trail').css('bottom', '15%');
     if ($row['vote'] == 1) 
     {
       echo "<style>#upvote_trail_button{color: rgb(255, 173, 43)} ";
-      echo "<style>#downvote_trail_button{color: #9187a1} ";
+      echo "<style>#downvote_trail_button{color: rgb(166, 166, 166)} ";
     }
     else if($row['vote'] == -1)
     {
       echo "<style>#downvote_trail_button{color: rgb(153, 187, 255)} ";
-      echo "<style>#upvote_trail_button{color: #9187a1} ";
+      echo "<style>#upvote_trail_button{color: rgb(166, 166, 166)} ";
     }
 }
 
