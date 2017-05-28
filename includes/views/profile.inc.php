@@ -5,7 +5,7 @@ session_start();
 
 	if(isset($_SESSION['user_name']))
 	{
-		$logged_in = $_SESSION['user_id'];
+		$loged_in = $_SESSION['user_id'];
 		$steps = 0;
 		
 
@@ -26,11 +26,6 @@ session_start();
 			$result_trail_id=mysqli_query($conn, $sql_trail_id);
 			$row_trail_id=mysqli_fetch_assoc($result_trail_id);
 			$trail_id = $row_trail_id['trailID'];
-		$sql = "SELECT * FROM user,trail join (SELECT trail.trailID, SUM(vote) as 'rating' FROM vote,trail WHERE vote.trailID = trail.trailID group by trail.trailID) rate on trail.trailID = rate.trailID WHERE trail.userID=user.userID AND WHERE rate.userID ='$logged_in' GROUP BY user.userID";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-
-		$steps = $row['rating'];
 
 			$sql_rating = "SELECT SUM(vote) as 'rating' FROM vote WHERE trailID = '$trail_id'";
 			$result_rating = mysqli_query($conn, $sql_rating);
