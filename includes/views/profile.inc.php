@@ -37,7 +37,7 @@ session_start();
 			$row_rating = mysqli_fetch_assoc($result_rating);
 
 
-			if( $row['userID'] == $loged_in) {
+			if( $row['userID'] == $logged_in) {
 				$steps = $steps + $row_rating['rating'];
 			}
 
