@@ -16,14 +16,25 @@
 		$postalCity =  mysqli_real_escape_string ($conn,$_POST['city_value']);
 
 		$sql = "INSERT INTO user (userName, email, password, salt, firstName, 
-				lastName,DateOfBirth, adress, postalCode,postalCity) 
+				lastName,DateOfBirth, adress, postalCode,postalCity, admin) 
 			VALUES ('$user_name', '$email', '$encrypted_password', '$user_salt', '$firstName','$lastName',
-			'$DateOfBirth', '$adress', '$postalCode', '$postalCity' )";	
+			'$DateOfBirth', '$adress', '$postalCode', '$postalCity', '0' )";	
 		
 		$result = mysqli_query($conn, $sql);
 		if (!$result) 
 		{
 			echo "Failed registration";
+			echo $user_name,
+			$email,
+			$password,
+			$user_salt,
+			$encrypted_password,
+			$firstName,
+			$lastName,
+			$DateOfBirth,
+			$adress,
+			$postalCode,
+			$postalCity;
 		}
 		else
 		{

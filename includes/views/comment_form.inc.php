@@ -1,7 +1,8 @@
 <?php
+session_start();
 
-    if (isset($_SESSION['user_name']))	{
-
+    if (isset($_SESSION['user_name']))	
+    {
     	$comment_form ="
 		<textarea id='comment_input'></textarea>
 		<input id='comment_trail_name' type='hidden' value='".$_POST['trail_name']."'>
@@ -9,7 +10,8 @@
 		<button id='comment_publish' class= 'button'>Publicera</button
 		";
 	}
-	else {
+	else 
+	{
 		$comment_form = "<h1 id=comment_mustlogin>Du måste logga in för att kommentera</h1>";
 	}
 	

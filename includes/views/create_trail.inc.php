@@ -22,7 +22,8 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: {lat: 59.853642, lng: 17.634966}
+          center: {lat: 59.853642, lng: 17.634966},
+          mapTypeId: 'terrain'
         });
 
         poly = new google.maps.Polyline({
