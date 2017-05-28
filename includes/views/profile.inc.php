@@ -5,7 +5,7 @@ session_start();
 
 	if(isset($_SESSION['user_name']))
 	{
-		$loged_in = $_SESSION['user_id'];
+		$logged_in = $_SESSION['user_id'];
 		$steps = 0;
 		
 
