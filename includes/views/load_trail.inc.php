@@ -70,8 +70,6 @@ $('#add_trail').css('bottom', '15%');
   echo "<div id=vote_container>";
   echo "<i id='upvote_trail_button'class='material-icons-arrows'>arrow_upward</i>";
   echo "<i id='downvote_trail_button' class='material-icons-arrows'>arrow_downward</i></div>";
-  echo $trail_creator;
-  echo $_SESSION['admin'];
 
     if($trail_creator == $_SESSION['user_name'] OR $_SESSION['admin'] == 1)
     {

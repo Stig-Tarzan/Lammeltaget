@@ -2,8 +2,28 @@
 	include '../bootstrap.php';
 	session_start();
 
-	$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID";
-	$result = mysqli_query($conn, $sql);
+
+	$search_input = $_POST['search_input'];
+	echo $search_input;
+
+	$search_input_exploded = explode(" ", $search_input);
+
+	if (!empty($search_input)) 
+	{
+		for ($i=0; $i < count($search_input_exploded); $i++) 
+		{ 
+			$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID AND trailName LIKE '%$search_input_exploded[$i]%' ";
+			$result = mysqli_query($conn, $sql);
+		}
+	}
+	else
+	{
+		echo "Tomt fält";
+		$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID";
+		$result = mysqli_query($conn, $sql);
+	}
+
+	
 
 
 	
