@@ -519,7 +519,35 @@ background-color:rgba(255, 173, 43,0.1);
 	min-height: 500px;
 	min-width: 350px;
 }
+/* styling for comments*/
 
+.comment_field {
+	background-color: rgba(0,0,0,0.05);
+	padding-right: 4px;
+	padding-left: 2px;
+	width: 98.5%;
+	font-family: 'Roboto', sans-serif;
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	min-height: 60px;
+	display: inline-block;
+}
+.commenter{
+	font-weight: bold;
+}
+.comment_date {
+	float: right;
+	
+}
+#comment_input {
+	height: 100px;
+	width: 45%;
+}
+#comment_publish{
+	bottom: 7px;
+}
+.delete_comment {
+	margin-left:85.2%;	 
+}
 /* styling for trails/maps and its contents info_content/bottom*/
 
 #content_bot {
