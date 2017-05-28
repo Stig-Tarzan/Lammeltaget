@@ -5,18 +5,15 @@ session_start();
 
 	if(isset($_SESSION['user_name']))
 	{
-		$loged_in = $_SESSION['user_id'];
+		$logged_in = $_SESSION['user_id'];
 		$steps = 0;
 		
 
-		$sql = "SELECT upVotes,downVotes FROM trail WHERE trail.userID=$loged_in";
+		$sql = "SELECT * FROM user,trail join (SELECT trail.trailID, SUM(vote) as 'rating' FROM vote,trail WHERE vote.trailID = trail.trailID group by trail.trailID) rate on trail.trailID = rate.trailID WHERE trail.userID=user.userID AND WHERE rate.userID ='$logged_in' GROUP BY user.userID";
 		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
 
-		while ($row = $result->fetch_assoc())  //Runs through the entire result
-		{
-			$steps = $steps + ($row['upVotes']-$row['downVotes']);
-
-		}
+		$steps = $row['rating'];
 
 		echo "
 				<div id='username_welcome'>" .$_SESSION['user_name'] ."<a id='user_steg'>Steg " .$steps ."</a></div>
