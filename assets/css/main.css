@@ -485,7 +485,7 @@ input#user_agree {
 #search_input {
 	border:0;
 	background-color: blue;
-	width: 90%; 
+	width: 87%; 
 	margin-top: 15px;
 	margin-bottom: 26px;
 	position: absolute;
@@ -507,10 +507,10 @@ input#user_agree {
 }
 #search_button {
 
-	background-color: rgba(244, 200, 66,0.8);
+	background-color: rgba(244, 200, 66,1);
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
-	height: 23px;
+	height: 23.5px;
 	font-weight: bold;
 	color: white;
 	position: absolute;
