@@ -24,17 +24,7 @@
 		if (!$result) 
 		{
 			echo "Failed registration";
-			echo $user_name,
-			$email,
-			$password,
-			$user_salt,
-			$encrypted_password,
-			$firstName,
-			$lastName,
-			$DateOfBirth,
-			$adress,
-			$postalCode,
-			$postalCity;
+	
 		}
 		else
 		{

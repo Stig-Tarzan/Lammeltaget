@@ -513,7 +513,7 @@ input#user_agree {
 	position: absolute;
 	margin-left: 4%;
 	margin-top: 15px;
-	
+	cursor: pointer;
 	width: 120px;
 	min-width:3em;
 	right: 29px;
