@@ -2,6 +2,7 @@ var mouse_is_inside = false;
 var mouse_is_inside_user = false;
 var register_has_loaded = false;
 var agree = false;
+var ishide= false;
 
 $(document).ready(function () {
 
@@ -22,8 +23,9 @@ $(document).ready(function () {
     });
 
     $("body").mouseup(function(){ 
-        if(! mouse_is_inside_user) {$('#user_section').load('includes/views/login.inc.php');
-        $('#user_section').css('width','10%'); };
+        if(! mouse_is_inside_user && ishide) {$('#user_section').load('includes/views/login.inc.php');
+        $('#user_section').css('width','10%'); 
+        $('#user_section').css('height','initial');};
     });
 
 
@@ -117,7 +119,7 @@ var poly_total;
 		$('#user_section').css('height', '1.1em');
 		$('#user_section').css('right', '12%');
 
-
+		ishide= false;
 	});
 
 	$('#user_section').on('click', '#show_btn',function () {
@@ -131,6 +133,7 @@ var poly_total;
 				$('#user_section').css('padding', '10px');
 		$('#user_section').css('border-radius', '0');
 		$('#user_section').css('right', '0');
+		ishide = true;
 	});
 
 

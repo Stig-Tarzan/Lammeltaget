@@ -471,6 +471,7 @@ input#user_agree {
 #search_container input{
 	background-color: rgba(0,0,0,0.1);
 	padding: 4px;
+
 }
 
 #search_container{
@@ -478,14 +479,16 @@ input#user_agree {
 	position: relative;
 	padding: 22px;
 	padding-left: 10px;
+	height: 60px;
 }
 
 #search_input {
 	border:0;
 	background-color: blue;
-	width: 98.1%; 
+	width: 90%; 
 	margin-top: 15px;
 	margin-bottom: 26px;
+	position: absolute;
 }
 
 #county_input {
@@ -511,12 +514,12 @@ input#user_agree {
 	font-weight: bold;
 	color: white;
 	position: absolute;
-	margin-left: 4%;
+	
 	margin-top: 15px;
 	cursor: pointer;
 	width: 120px;
 	min-width:3em;
-	right: 29px;
+	right: 8.2%;
 
 }
 
