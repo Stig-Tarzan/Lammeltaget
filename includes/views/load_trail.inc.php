@@ -22,6 +22,7 @@
   $row = mysqli_fetch_assoc($result);
   $trail_id = $row['trailID'];
   $trail_description = $row['trailInfoText'];
+  $trail_length = $row['trailLength'];
 
   
   $googlemaps_api = "
@@ -86,6 +87,7 @@
   echo "<label id='trail_name_in_display' value='$trail_name'><h1>$trail_name</h1></label>";
   echo "<label id='trail_creator_name_in_display' value='$trail_creator'>Skapad av: $trail_creator</label>"; 
   echo "<text id='trail_description' value='$trail_name'>Beskrivning: $trail_description</text>";
+  echo "<text id='trail_description' value='$trail_name'>Längd: $trail_length meter</text>";
   echo "</div>";
   
    
