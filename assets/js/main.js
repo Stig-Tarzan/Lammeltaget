@@ -227,7 +227,7 @@ var poly_total;
 						if(postcode.length == 5)
 						{$('#postcode_register').css('border', 'initial');
 
-							var data = { username_value: user_name, email_value: email, password_value: password, first_name: '0', last_name: lastname
+							var data = { username_value: user_name, email_value: email, password_value: password, first_name: firstname, last_name: lastname
 							,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
 							if(user_name == "" || email == ""|| password == ""|| 
 								firstname == ""|| lastname == ""|| DOB == ""

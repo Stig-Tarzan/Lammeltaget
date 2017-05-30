@@ -15,19 +15,31 @@
 		$postalCode =  mysqli_real_escape_string ($conn,$_POST['postalcode_value']);
 		$postalCity =  mysqli_real_escape_string ($conn,$_POST['city_value']);
 
-		$sql = "INSERT INTO user (userName, email, password, salt, firstName, 
-				lastName,DateOfBirth, adress, postalCode,postalCity, admin) 
-			VALUES ('$user_name', '$email', '$encrypted_password', '$user_salt', '$firstName','$lastName',
-			'$DateOfBirth', '$adress', '$postalCode', '$postalCity', '0' )";	
-		
+
+		$sql = "SELECT * FROM user WHERE userName='$user_name'";
 		$result = mysqli_query($conn, $sql);
-		if (!$result) 
+		$row = mysqli_fetch_assoc($result);
+
+		if ($row == 0) 
 		{
-			echo "Regstrering misslyckades";
-	
+			$sql = "INSERT INTO user (userName, email, password, salt, firstName, 
+					lastName,DateOfBirth, adress, postalCode,postalCity, admin) 
+				VALUES ('$user_name', '$email', '$encrypted_password', '$user_salt', '$firstName','$lastName',
+				'$DateOfBirth', '$adress', '$postalCode', '$postalCity', '0' )";	
+			
+			$result = mysqli_query($conn, $sql);
+			if (!$result) 
+			{
+				echo "Regstrering misslyckades";
+		
+			}
+			else
+			{
+				echo "Registreringen lyckades";
+			}	
 		}
 		else
 		{
-			echo "Registreringen lyckades";
+			echo "Användarnamnet är upptaget";
 		}
 	}
