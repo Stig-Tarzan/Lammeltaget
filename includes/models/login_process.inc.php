@@ -4,8 +4,8 @@ session_start();
 
 if (isset($_POST['username_value']))  
 	{
-		$user_name = $_POST['username_value'];
-		$password =$_POST['password_value'];
+		$user_name = mysqli_real_escape_string ($conn,$_POST['username_value']);
+		$password = mysqli_real_escape_string ($conn,$_POST['password_value']);
 
 		$sql = "SELECT * FROM user WHERE userName='$user_name'";
 		$result = mysqli_query($conn, $sql);

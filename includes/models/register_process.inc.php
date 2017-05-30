@@ -23,11 +23,11 @@
 		$result = mysqli_query($conn, $sql);
 		if (!$result) 
 		{
-			echo "Failed registration";
+			echo "Regstrering misslyckades";
 	
 		}
 		else
 		{
-			echo "Successful registration";
+			echo "Registreringen lyckades";
 		}
 	}

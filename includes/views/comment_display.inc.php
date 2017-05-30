@@ -28,7 +28,7 @@
 
 		$commenter = $row_user_name['userName'];
 		$comment_date = $row['date'];
-		$comment_content = $row['content'];
+		$comment_content = nl2br($row['content']);
 
 		echo "<div class='comment_field'>";
 		echo "<div class='comment_date'>".$comment_date."</div>";

@@ -6,10 +6,10 @@
 
 	if (isset($_POST['comment_input'])) 
 	{
-		$comment_input = $_POST['comment_input'];
-		$user_id = $_SESSION['user_id'];
-		$trail_name = $_POST['comment_trail_name'];
-		$date = $_POST['comment_date'];
+		$comment_input = mysqli_real_escape_string ($conn,$_POST['comment_input']);
+		$user_id = mysqli_real_escape_string ($conn,$_SESSION['user_id']);
+		$trail_name = mysqli_real_escape_string ($conn,$_POST['comment_trail_name']);
+		$date = mysqli_real_escape_string ($conn,$_POST['comment_date']);
 
 		$sql= "SELECT * FROM trail WHERE trailName = '$trail_name'";
 

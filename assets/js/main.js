@@ -211,51 +211,60 @@ var poly_total;
 
 		if(agree){
 			
-			
-			if (!validateemail(email)) {
-				$('#email_register').css('border', 'red 2px solid');
-			}
-			else {
-				$('#email_register').css('border', 'initial');
-			
-				if(hasSpaces(user_name))
-				{
-					$('#username_register').css('border', 'initial');
-
-					if(postcode.length == 5)
-					{$('#postcode_register').css('border', 'initial');
-
-						var data = { username_value: user_name, email_value: email, password_value: password, first_name: '0', last_name: lastname
-						,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
-						if(user_name == "" || email == ""|| password == ""|| 
-							firstname == ""|| lastname == ""|| DOB == ""
-							|| adress == ""|| postcode == ""|| city == "")
-						{
-							alert("Please fill all fields")
-						}
-						else
-						{
-							$.post("includes/models/register_process.inc.php", 
-								data
-							, function(data, status)
-							{
-								alert(data);
-								
-								$('#user_section').load('includes/views/login.inc.php');
-								$('#user_section').css('width', '10%');
-								agree = false;
-							});		
-						}
-					}
-					else{
-						$('#postcode_register').css('border', 'red 2px solid');
-					}
+			if (!user_name.length == 0)
+			{
+				$('#username_register').css('border', 'initial');
+				if (!validateemail(email)) {
+					$('#email_register').css('border', 'red 2px solid');
 				}
 				else {
-				$('#username_register').css('border', 'red 2px solid');
+					$('#email_register').css('border', 'initial');
+				
+					if(hasSpaces(user_name))
+					{
+						$('#username_register').css('border', 'initial');
 
-				}
+						if(postcode.length == 5)
+						{$('#postcode_register').css('border', 'initial');
+
+							var data = { username_value: user_name, email_value: email, password_value: password, first_name: '0', last_name: lastname
+							,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
+							if(user_name == "" || email == ""|| password == ""|| 
+								firstname == ""|| lastname == ""|| DOB == ""
+								|| adress == ""|| postcode == ""|| city == "")
+							{
+								alert("Please fill all fields")
+							}
+							else
+							{
+								$.post("includes/models/register_process.inc.php", 
+									data
+								, function(data, status)
+								{
+									alert(data);
+									
+									$('#user_section').load('includes/views/login.inc.php');
+									$('#user_section').css('width', '10%');
+									agree = false;
+								});		
+							}
+						}
+						else{
+							$('#postcode_register').css('border', 'red 2px solid');
+						}
+					}
+					else {
+					$('#username_register').css('border', 'red 2px solid');
+
+					}
+				}				
 			}
+			else
+			{
+				$('#username_register').css('border', 'red 2px solid');
+			}
+			
+
 
 		}
 		else {
@@ -317,6 +326,7 @@ var poly_total;
       var trail_difficulty_level_value = $('#trail_difficulty').val();
       var trail_creation_date_value = $('#trail_creation_date').val();
       var trail_info_value = $('#trail_info').val();
+      var trail_info_value_cleaned = trail_info_value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
       var trail_shape_value_raw = poly.getPath().getArray().toString();
       var trail_shape_value = trail_shape_value_raw.replace(/[() ]/g, '');
       var trail_length_value = $('#trail_length').val();
@@ -326,7 +336,7 @@ var poly_total;
         trail_name_value: trail_name_value, 
         trail_difficulty_level_value: trail_difficulty_level_value, 
         trail_creation_date_value: trail_creation_date_value,
-        trail_info_value: trail_info_value,
+        trail_info_value: trail_info_value_cleaned,
         trail_shape_value: trail_shape_value,
         trail_length_value: trail_length_value  
       }
@@ -371,10 +381,11 @@ var poly_total;
 	 $('#main_section').on('click', '#comment_publish',function () 
     {
     	var comment_input = $('#comment_input').val();
+    	var comment_input_cleaned = comment_input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     	var comment_trail_name = $('#comment_trail_name').val();
     	var comment_date = $('#comment_date').val();
     	var data = 
-    		{comment_input: comment_input, 
+    		{comment_input: comment_input_cleaned, 
     		comment_trail_name: comment_trail_name,
     		comment_date: comment_date 
     		};
@@ -383,7 +394,9 @@ var poly_total;
 			data
 			, function(data, status)
 			{
+				$('#content_bot').load('includes/views/comment_form.inc.php', {trail_name: comment_trail_name});
 				$('#content_bot_2').load('includes/views/comment_display.inc.php', {trail_name: comment_trail_name});
+
 			});
     	
     });
@@ -451,7 +464,7 @@ $('#filter_container').on('click', '.alpha_button',function () {
 	//***************************************************
 
     //*************delete trail*********************
-	$('#content_top').on('click', '.delete_trail',function () 
+	$('#content_top2').on('click', '.delete_trail',function () 
     {
     	var trail_name = this.id;
 	    var data = {trail_name: trail_name};

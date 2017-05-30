@@ -3,7 +3,7 @@
 	session_start();
 
 
-	$search_input = $_POST['search_input'];
+	$search_input = mysqli_real_escape_string ($conn,$_POST['search_input']);
 	$search_input_exploded = explode(" ", $search_input);
 
 	if (!empty($search_input)) 
@@ -19,14 +19,6 @@
 		$sql = "SELECT * FROM trail,user WHERE trail.userID=user.userID";
 		$result = mysqli_query($conn, $sql);
 	}
-
-	
-
-
-	
-//Ovan bör ligga kvar och $result bör "Returnas"
-
-//Vi bör bryta ut nedan till en view
 		while ($row = $result->fetch_assoc())  
 		{
 			$trail_name = $row['trailName'];
