@@ -7,6 +7,6 @@ session_start();
 						 <input name='pasword_value' id='password_input' type='password' placeholder='Password'>
 						 <button name='login_button' id='login_button' class='button'>Logga in</button>
 						 <button class='button' id='register_button'>Registrera</button>
-						 <a id=hide_btn> hide</a>";
+						 <a id=hide_btn>Göm</a>";
 		echo $login_fields;
 	}
