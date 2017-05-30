@@ -15,9 +15,7 @@ session_start();
 
 
 	
-//Ovan bör ligga kvar och $result bör "Returnas"
 
-//Vi bör bryta ut nedan till en view
 		while ($row = $result->fetch_assoc())  
 		{
 			$trail_name = $row['trailName'];
@@ -38,7 +36,12 @@ session_start();
 
 		}
 		echo "
-				<div id='username_welcome'>" .$_SESSION['user_name'] ."<a id='user_steg'>Steg " .$steps ."</a></div>
+				<div id='username_welcome'>" .$_SESSION['user_name'] ."<a id='user_steg'>Steg " .$steps ."</a></div>";
+				if($_SESSION['admin'] == 1)
+				{
+					echo "<a id='admin_page'>Administratörssida</a>";
+				}
+		echo "
 				<a id='user_trails'>Mina Leder</a>
 				<a class='banner_obj' id='log_out_button'>Logga ut </a>
 				

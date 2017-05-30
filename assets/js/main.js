@@ -171,6 +171,24 @@ var poly_total;
 		$('#content_top').load('includes/views/my_trails.inc.php');
 
 	});
+	//*********************************************************
+
+	//*************admin page*********************************
+	$('#profile_section').on('click', '#admin_page',function () {
+		$('#content_bot').css('display', 'none');
+		$("#add_trail").css("display", "flex");
+		$("#add_trail").css('bottom', '2%');
+		$('#undo_icon').css("display", "none");
+		$('#save_icon').css("display", "none");
+		$('#comment_icon').css("display", "none");
+		$('#content_top2').css("display", "none");
+		$('#delete_trail_button').css("display", "none");
+		
+		$('#content_bot_2').hide();
+		$('#content_top').load('includes/views/user_list.inc.php');
+
+	});
+	//*********************************************************
 
 	//*************Register*****************************
 	$('#user_section').on('click', '#user_agree',function () {
@@ -460,6 +478,29 @@ $('#filter_container').on('click', '.alpha_button',function () {
     });
     //***************************************************
 
+
+
+	//*************delete user*********************
+	$('#content_top').on('click', '.delete_user',function () 
+    {
+    if (confirm('Är du säker på att du vill ta bort denna kund?')) 
+    {
+ 	    var data = {user_id: this.id};
+	    $.post("includes/models/user_delete.inc.php", 
+			data
+			, function(data, status)
+			{
+				if (!data.length == 0)
+				{
+					alert(data);					
+				}
+
+				$('#content_top').load('includes/views/user_list.inc.php');
+			});   
+	} 	
+
+    });
+    //***************************************************
 
 
 	$('#main_section').on('click', '#add_trail',function () 
