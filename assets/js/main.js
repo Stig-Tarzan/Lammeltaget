@@ -266,7 +266,7 @@ var poly_total;
 								firstname == ""|| lastname == ""|| DOB == ""
 								|| adress == ""|| postcode == ""|| city == "")
 							{
-								alert("Please fill all fields")
+								alert("Var god fyll i alla fält")
 							}
 							else
 							{
