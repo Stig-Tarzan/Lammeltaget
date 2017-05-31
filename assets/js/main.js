@@ -230,19 +230,35 @@ var poly_total;
 			
 			if (!user_name.length == 0)
 			{
-				$('#username_register').css('border', 'initial');
+				$('#username_register').css('border-top', 'none');
+				$('#username_register').css('border-left', '2px solid rgba(255, 173, 43,0.6)');
+				$('#username_register').css('border-right', 'none');
+				$('#username_register').css('border-bottom', '2px solid rgba(255, 173, 43,0.6)');
+
 				if (!validateemail(email)) {
 					$('#email_register').css('border', 'red 2px solid');
 				}
 				else {
-					$('#email_register').css('border', 'initial');
-				
+					
+					$('#email_register').css('border-top', 'none');
+					$('#email_register').css('border-left', '2px solid rgba(255, 173, 43,0.6)');
+					$('#email_register').css('border-right', 'none');
+					$('#email_register').css('border-bottom', '2px solid rgba(255, 173, 43,0.6)');
+					
 					if(hasSpaces(user_name))
 					{
-						$('#username_register').css('border', 'initial');
+						$('#username_register').css('border-top', 'none');
+						$('#username_register').css('border-left', '2px solid rgba(255, 173, 43,0.6)');
+						$('#username_register').css('border-right', 'none');
+						$('#username_register').css('border-bottom', '2px solid rgba(255, 173, 43,0.6)');
 
 						if(postcode.length == 5)
-						{$('#postcode_register').css('border', 'initial');
+						{
+							
+							$('#postcode_register').css('border-top', 'none');
+							$('#postcode_register').css('border-left', '2px solid rgba(255, 173, 43,0.6)');
+							$('#postcode_register').css('border-right', 'none');
+							$('#postcode_register').css('border-bottom', '2px solid rgba(255, 173, 43,0.6)');
 
 							var data = { username_value: user_name, email_value: email, password_value: password, first_name: firstname, last_name: lastname
 							,dob_value: DOB, address_value: adress, postalcode_value: postcode, city_value: city }
