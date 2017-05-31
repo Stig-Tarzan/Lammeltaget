@@ -10,13 +10,15 @@
 
 	$sql = "SELECT * FROM comment WHERE trailID ='$trail_id'";
 	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_assoc($result);
+
 
 
 	
 //Ovan bör ligga kvar och $result bör "Returnas"
 
 //Vi bör bryta ut nedan till en view
+
+
 
 	while ($row = $result->fetch_assoc())  
 	{
