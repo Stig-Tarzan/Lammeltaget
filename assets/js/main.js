@@ -65,9 +65,26 @@ var poly_total;
 	//*************Search trails*********************************
 
 	$('#search_container').on('click', '#search_button',function () {
+
+		$.post("includes/models/session_status.inc.php",{}, function(data, status)
+			{
+
+				if(data == 'false'){
+
+					$("#add_trail").css("display", "none");
+					$("#user_section").css("display", "flex");
+			
+				}
+				else
+				{
+					$("#add_trail").css("display", "flex");
+					$("#add_trail").css('bottom', '2%');
+				}
+		});
+		
+
 		$('#content_bot').css('display', 'none');
-		$("#add_trail").css("display", "flex");
-		$("#add_trail").css('bottom', '2%');
+
 		$('#undo_icon').css("display", "none");
 		$('#save_icon').css("display", "none");
 		$('#comment_icon').css("display", "none");
