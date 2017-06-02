@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 31 maj 2017 kl 08:48
+-- Tid vid skapande: 02 jun 2017 kl 12:17
 -- Serverversion: 5.7.14
 -- PHP-version: 5.6.25
 
@@ -39,23 +39,13 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`commentID`, `trailID`, `userID`, `content`, `date`) VALUES
-(68, 43, 60, 'Det hÃ¤r Ã¤r min favorit!', '2017-05-28'),
 (69, 43, 60, 'Det hÃ¤r Ã¤r min favorit!', '2017-05-28'),
-(71, 44, 60, 'Det hÃ¤r var en riktigt snurrig en!', '2017-05-28'),
 (72, 44, 60, 'Det hÃ¤r var en riktigt snurrig en!', '2017-05-28'),
 (73, 43, 62, 'Det hÃ¤r var inte mycket fÃ¶r vÃ¤rlden...', '2017-05-28'),
 (86, 43, 61, 'As discussed in Hazards of outdoor recreation, hiking may produce threats to personal safety, from such causes as hazardous terrain, inclement weather, becoming lost, or exacerbation of pre-existing medical conditions. These dangerous circumstances and/or specific accidents or ailments that hikers face may include, for example, diarrhea, one of the most common illnesses afflicting long-distance hikers in the United States.[32] (See Wilderness acquired diarrhea.)\n\nAdditional potential hazards involving physical ailments may include dehydration, frostbite, hypothermia, sunburn, or sunstroke, or such injuries as ankle sprains, or broken bones.[33]\nOther threats may be posed attacks by animals (such as mammals (e.g., bears), reptiles (e.g., snakes), or insects) or contact with noxious plants that can cause rashes (e.g., poison ivy, poison oak, poison sumac, or stinging nettles). Attacks by humans are also a reality in some places, and lightning is also a threat, especially on high ground.\nThe crossing of glaciers is potentially hazardous because of the potential for crevasses. These giant cracks in the ice are not always visible as snow can be blown and freeze over the top to make a snowbridge. To cross a glacier the use of a rope, crampons and ice axes are usually required. Deep, fast flowing rivers pose another danger that can be mitigated with ropes.\n\n\nIn various countries, borders may be poorly marked. In 2009, Iran imprisoned three Americans for hiking across the Iran-Iraq border.[34] It is illegal to cross into the US on the Pacific Crest Trail from Canada. Going south to north it is more straightforward and a crossing can be made, if advanced arrangements are made with Canada Border Services. Within the Schengen Area, which includes most of the E.U., and associated nations like Switzerland and Norway, there are no impediments to crossing by path, and borders are not always obvious.[35]', '2017-05-30'),
-(88, 48, 60, '<button class=\'button\'>HAHA</button>', '2017-05-30'),
 (91, 48, 62, 'Ett antal broar finns i omrÃ¥det samt en nÃ¶dtelefon i Mikkastugan, belÃ¤gen nÃ¤ra Ruotesvagges mynning mot Ã¶vre Rapadalen.', '2017-05-30'),
-(93, 43, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(94, 43, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(95, 43, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(96, 43, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(97, 44, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(98, 48, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(99, 51, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(101, 51, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30'),
-(102, 51, 71, 'DammsugarpÃ¥sar.nu - Snabbt och enkelt - dammsugarpasar.nuâ€Ž\nAnnonswww.dammsugarpasar.nu/â€Ž\nVÃ¥ra pÃ¥sar Ã¤r gjorda av Electrolux. BestÃ¤ll dina dammsugarpÃ¥sar idag!\nTrygg E-handel Â· Original och lÃ¥gpris', '2017-05-30');
+(106, 43, 61, 'Kjelle Ã¤r rapporterad', '2017-05-31'),
+(108, 43, 60, 'Hej, fin led ', '2017-05-31');
 
 -- --------------------------------------------------------
 
@@ -113,8 +103,7 @@ INSERT INTO `user` (`userID`, `admin`, `userName`, `email`, `password`, `salt`, 
 (60, 0, 'Stig', 'john.f.almqvist@gmail.com', 'e7ff7e59cdc77960721b4b6aa62e54f7e4ce0e9a', '07e13001f2ab40711cdbca', '0', 'hanke', '1911-01-28', 'VÃ¤ktargatan 26', '75422', 'Uppsala'),
 (61, 1, 'admin', 'admin@admin.se', 'fe1933976eaa4165792777bad22912fe26431ff4', '5415d00498e0ae2ea2e0fb', '0', 'Adele', '9199-01-28', 'Vaksalatorg', '75244', 'Uppsala'),
 (62, 0, 'Jan-Emanuel', 'Janne61@gmail.com', '1f831c9452f8c7852558b2cec79b14f045ece615', '3ed2347ddacbb088c9419a', '0', 'Evert', '1961-01-21', 'Hans', '74249', 'StrÃ¤ngnÃ¤s'),
-(63, 0, 'Hanky', 'hank@gmail.se', '21db5d60ddc66919711035e197867513176617e2', 'a15c8eee9f0fc3bc818be2', '0', 'henkeland@gmail.se', '1991-01-28', 'VÃ¤ktargatan 25', '75422', 'Uppsala'),
-(71, 0, 'Kjelle', 'kjel@gmail.se', '8080b8b7c61055f65261f158e346ea257177624b', '4350b0e1d784dd7c69c7ec', '0', 'KjellstrÃ¶m damsugsfÃ¶rsÃ¤ljare', '1991-01-11', 'DamsugarpÃ¥sar.se', '75422', 'Sarek');
+(63, 0, 'Hanky', 'hank@gmail.se', '21db5d60ddc66919711035e197867513176617e2', 'a15c8eee9f0fc3bc818be2', '0', 'henkeland@gmail.se', '1991-01-28', 'VÃ¤ktargatan 25', '75422', 'Uppsala');
 
 -- --------------------------------------------------------
 
@@ -136,7 +125,7 @@ CREATE TABLE `vote` (
 INSERT INTO `vote` (`voteID`, `userID`, `trailID`, `vote`) VALUES
 (22, 62, 43, 1),
 (23, 62, 44, 1),
-(24, 60, 43, 1),
+(24, 60, 43, -1),
 (25, 60, 44, -1),
 (26, 61, 44, 1),
 (27, 61, 43, 1),
@@ -189,22 +178,22 @@ ALTER TABLE `vote`
 -- AUTO_INCREMENT för tabell `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 --
 -- AUTO_INCREMENT för tabell `trail`
 --
 ALTER TABLE `trail`
-  MODIFY `trailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `trailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT för tabell `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 --
 -- AUTO_INCREMENT för tabell `vote`
 --
 ALTER TABLE `vote`
-  MODIFY `voteID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `voteID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- Restriktioner för dumpade tabeller
 --
