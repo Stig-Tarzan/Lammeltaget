@@ -333,7 +333,7 @@ var poly_total;
 				}
 				else
 				{
-					alert(data);
+					
 					$("#user_section input").css("border", "solid 1px red");
 				}
 
