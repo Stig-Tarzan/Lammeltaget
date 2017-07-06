@@ -31,7 +31,9 @@ date_default_timezone_set('Europe/Stockholm');
 
         <body id='body'>
             <div id='main_section'>
-                <div id='search_container'></div>
+                <div id='search_container'>
+                    
+                </div>
                 <div id='filter_container'></div>
 
                 <div id='add_trail'></div>
